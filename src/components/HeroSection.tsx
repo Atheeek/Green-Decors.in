@@ -110,7 +110,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
         )}
 
         {/* Hero Content */}
-        <div className="relative z-10 px-4 sm:px-8 lg:px-12 md:mt-10 mt-36 flex items-center h-[calc(100%-80px)] sm:h-[calc(100%-100px)]">
+        <div className="relative z-10 px-4 sm:px-8 lg:px-12 md:mt-10 mt-28 flex items-center h-[calc(100%-80px)] sm:h-[calc(100%-100px)]">
           <div className="max-w-4xl">
             <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-inter-display font-medium leading-tight mb-6 sm:mb-8">
               Discover the art of eco conscious interior design with Green Decors.
