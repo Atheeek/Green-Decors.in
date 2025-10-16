@@ -4,16 +4,16 @@ import { ArrowRight } from 'lucide-react';
 function PropertyGateway() {
   const categories = [
     {
-      name: 'Residential Towers',
-      image: 'https://plus.unsplash.com/premium_photo-1694475634077-e6e4b623b574?q=80&w=1971&auto=format&fit=crop',
+      name: 'Residential Interiors',
+      image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200',
     },
     {
-      name: 'Business Districts',
-      image: 'https://plus.unsplash.com/premium_photo-1661919068698-40e7b78f196a?q=80&w=2070&auto=format&fit=crop',
+      name: 'Commercial Spaces',
+      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200',
     },
     {
-      name: 'Bespoke Villas',
-      image: 'https://images.unsplash.com/photo-1562595410-2cb999af24b5?q=80&w=1626&auto=format&fit=crop',
+      name: 'Home Styling',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
     },
   ];
 

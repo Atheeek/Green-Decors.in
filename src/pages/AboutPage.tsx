@@ -68,22 +68,22 @@ function AboutPage({ onNavigate }: AboutPageProps) {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200)',
           }}
         />
         <div className="absolute inset-0 bg-black opacity-30" />
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-12 max-w-4xl mx-auto">
           <div className="font-inter-display text-sm font-normal leading-tight text-gray-300 uppercase mb-4">
-            About Prime Properties
+            About Green Decors
           </div>
 
           <h1 className="text-white font-inter-display font-medium leading-tight text-3xl md:text-5xl lg:text-6xl mb-6">
-            Crafting Legacies in Luxury Real Estate
+            Eco‑Conscious Interior Design, Thoughtfully Crafted
           </h1>
 
           <p className="text-gray-200 font-inter-display text-base md:text-lg font-normal leading-relaxed max-w-2xl mb-8">
-            For over two decades, we've been transforming the UAE's skyline with architectural masterpieces that blend innovation, sustainability, and timeless elegance.
+            We transform homes and commercial spaces with sustainable materials, timeless aesthetics, and detail‑driven craftsmanship—rooted in Nehrunagar, Puttur, Karnataka.
           </p>
 
           <button className="px-8 py-3 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-100 transition-all">
@@ -124,11 +124,11 @@ function AboutPage({ onNavigate }: AboutPageProps) {
             <div className="h-px bg-gray-200 w-24" />
 
             <p className="font-inter-display text-base md:text-lg font-normal leading-relaxed text-gray-600">
-              Founded in 2000, Prime Properties emerged from a vision to redefine luxury living in the UAE. Our journey began with a single residential tower in Dubai Marina and has since expanded to over 150 iconic developments across the Emirates.
+              Founded in Puttur, Green Decors began with a simple mission: design beautiful, sustainable interiors that feel like home. From compact makeovers to full space transformations, we bring nature‑inspired design into everyday living.
             </p>
 
             <p className="font-inter-display text-base md:text-lg font-normal leading-relaxed text-gray-600">
-              We specialize in creating architectural landmarks that harmonize modern design with cultural heritage, sustainable practices with luxury amenities, and innovation with timeless elegance. Each project reflects our commitment to excellence and our deep understanding of what makes a house a home.
+              We specialize in eco‑friendly materials, efficient layouts, natural lighting, and handcrafted finishes—balancing aesthetics, comfort, and sustainability in every project.
             </p>
           </div>
         </div>
@@ -141,7 +141,7 @@ function AboutPage({ onNavigate }: AboutPageProps) {
               Our Values
             </h2>
             <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
-              The principles that guide everything we do
+              Principles that guide every space we create
             </p>
           </div>
 

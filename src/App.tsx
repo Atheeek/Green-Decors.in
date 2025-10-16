@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import HeroSection from './components/HeroSection';
 import LogoCloud from './components/LogoCloud';
 import PropertyCarousel from './components/PropertyCarousel';
@@ -18,13 +18,23 @@ type Page = 'home' | 'about' | 'services' | 'project-details';
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
   const [selectedProject, setSelectedProject] = useState<string>('');
+  const homeScrollYRef = useRef<number>(0);
 
-  const navigateToPage = (page: Page, projectId?: string) => {
-    setCurrentPage(page);
+  const navigateToPage = (page: string, projectId?: string) => {
+    const allowedPages = ['home', 'about', 'services', 'project-details'] as const;
+    const targetPage: Page = (allowedPages as readonly string[]).includes(page) ? (page as Page) : 'home';
+    if (targetPage !== 'home') {
+      homeScrollYRef.current = window.scrollY;
+    }
+    setCurrentPage(targetPage);
     if (projectId) {
       setSelectedProject(projectId);
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (targetPage === 'home') {
+      window.scrollTo({ top: homeScrollYRef.current, behavior: 'auto' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
   };
 
   if (currentPage === 'about') {

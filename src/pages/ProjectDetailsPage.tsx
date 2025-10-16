@@ -8,134 +8,133 @@ interface ProjectDetailsPageProps {
 
 function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) {
   const projects: Record<string, any> = {
-    residential: {
-      name: 'Marina Heights',
-      tagline: 'Luxury Waterfront Residences, Dubai Marina',
+    'living-room': {
+      name: 'Living Room Makeover',
+      tagline: 'Warm, Natural Textures • Nehrunagar, Puttur',
       mainImage: 'https://images.unsplash.com/photo-1544092683-c0c9ebb368e5?w=900&auto=format&fit=crop&q=60',
-      description: 'Marina Heights represents the pinnacle of waterfront living in Dubai. This 45-story residential tower features panoramic views of the Arabian Gulf, state-of-the-art amenities, and thoughtfully designed living spaces that embody modern luxury. Each residence is crafted with premium materials and finishes, offering residents an unparalleled lifestyle experience.',
+      description: 'A calm living space designed around natural light, sustainable materials and comfortable seating—merging function with a timeless look.',
       stats: {
-        location: 'Dubai Marina, Dubai',
-        area: '125,000 sq.ft',
-        year: '2023',
-        architect: 'Foster + Partners',
-        client: 'Residential',
+        location: 'Nehrunagar, Puttur, Karnataka',
+        area: '420 sq.ft',
+        year: '2025',
+        architect: 'Green Decors',
+        client: 'Residential Interior',
       },
       gallery: [
-        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200',
+        'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200',
+        'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200',
+        'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=1200',
       ],
       features: [
-        { icon: <Droplet className="w-6 h-6" />, title: 'Infinity Pool' },
-        { icon: <Home className="w-6 h-6" />, title: 'Smart Home Integration' },
-        { icon: <Eye className="w-6 h-6" />, title: 'Panoramic Views' },
-        { icon: <Leaf className="w-6 h-6" />, title: 'Green Building Certified' },
+        { icon: <Leaf className="w-6 h-6" />, title: 'Sustainable Materials' },
+        { icon: <Home className="w-6 h-6" />, title: 'Optimized Layout' },
+        { icon: <Eye className="w-6 h-6" />, title: 'Natural Light' },
+        { icon: <Droplet className="w-6 h-6" />, title: 'Low‑VOC Finishes' },
       ],
     },
-    villas: {
-      name: 'Desert Oasis Villas',
-      tagline: 'Exclusive Desert Living, Arabian Ranches',
+    kitchen: {
+      name: 'Minimal Modular Kitchen',
+      tagline: 'Efficient Storage • Easy Maintenance',
       mainImage: 'https://images.unsplash.com/photo-1600450575743-43793ba079d3?q=80&w=2073&auto=format&fit=crop',
-      description: 'Desert Oasis Villas brings together contemporary architecture and natural desert beauty. These exclusive villas feature expansive living spaces, private pools, and landscaped gardens that create a serene retreat from urban life while maintaining proximity to Dubai\'s key destinations.',
+      description: 'A modular kitchen planned for workflow: efficient storage, durable surfaces and warm tones for everyday cooking and gathering.',
       stats: {
-        location: 'Arabian Ranches, Dubai',
-        area: '8,500 sq.ft per villa',
-        year: '2024',
-        architect: 'Zaha Hadid Architects',
-        client: 'Private Villas',
+        location: 'Puttur, Karnataka',
+        area: '160 sq.ft',
+        year: '2025',
+        architect: 'Green Decors',
+        client: 'Kitchen Renovation',
       },
       gallery: [
-        'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?q=80&w=800&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1556912167-f556f1f39faa?w=1200',
+        'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200',
+        'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200',
+        'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200',
       ],
       features: [
-        { icon: <Droplet className="w-6 h-6" />, title: 'Private Pools' },
-        { icon: <Home className="w-6 h-6" />, title: 'Smart Technology' },
-        { icon: <Maximize className="w-6 h-6" />, title: 'Spacious Layouts' },
-        { icon: <Leaf className="w-6 h-6" />, title: 'Sustainable Design' },
+        { icon: <Maximize className="w-6 h-6" />, title: 'Space‑Smart Storage' },
+        { icon: <Droplet className="w-6 h-6" />, title: 'Easy‑Clean Surfaces' },
+        { icon: <Leaf className="w-6 h-6" />, title: 'Energy‑Efficient Lighting' },
+        { icon: <Home className="w-6 h-6" />, title: 'Ergonomic Workflow' },
       ],
     },
-    condos: {
-      name: 'Skyline Residences',
-      tagline: 'High-End Urban Living, Downtown Dubai',
+    commercial: {
+      name: 'Boutique Store Interior',
+      tagline: 'Brand‑led Layout • Natural Palette',
       mainImage: 'https://plus.unsplash.com/premium_photo-1661952507078-b620cba09fdb?q=80&w=2070&auto=format&fit=crop',
-      description: 'Skyline Residences offers sophisticated urban living in the heart of Downtown Dubai. With stunning views of the Burj Khalifa and Dubai Fountain, these premium condominiums feature world-class amenities, elegant interiors, and unmatched connectivity to the city\'s finest attractions.',
+      description: 'A compact retail interior with flexible display, visual hierarchy and a warm palette that puts the products first.',
       stats: {
-        location: 'Downtown Dubai, Dubai',
-        area: '95,000 sq.ft',
-        year: '2023',
-        architect: 'Gensler',
-        client: 'Mixed-Use',
-      },
-      gallery: [
-        'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop',
-      ],
-      features: [
-        { icon: <Building className="w-6 h-6" />, title: 'Sky Lounge' },
-        { icon: <Home className="w-6 h-6" />, title: 'Concierge Service' },
-        { icon: <Eye className="w-6 h-6" />, title: 'City Views' },
-        { icon: <Droplet className="w-6 h-6" />, title: 'Rooftop Pool' },
-      ],
-    },
-    mansions: {
-      name: 'Emirates Estates',
-      tagline: 'Contemporary Mansions, Emirates Hills',
-      mainImage: 'https://images.unsplash.com/photo-1526495124232-a04e1849168c?q=80&w=987&auto=format&fit=crop',
-      description: 'Emirates Estates represents the ultimate in luxury mansion living. Set within the prestigious Emirates Hills community, these architectural masterpieces feature cutting-edge design, expansive grounds, and bespoke finishes that cater to the most discerning clientele.',
-      stats: {
-        location: 'Emirates Hills, Dubai',
-        area: '15,000 sq.ft per mansion',
+        location: 'Puttur, Karnataka',
+        area: '650 sq.ft',
         year: '2024',
-        architect: 'Perkins and Will',
-        client: 'Ultra-Luxury Residential',
+        architect: 'Green Decors',
+        client: 'Retail Interior',
       },
       gallery: [
-        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=800&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200',
+        'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200',
+        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
+        'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200',
       ],
       features: [
-        { icon: <Maximize className="w-6 h-6" />, title: 'Expansive Grounds' },
-        { icon: <Home className="w-6 h-6" />, title: 'Home Cinema' },
-        { icon: <Droplet className="w-6 h-6" />, title: 'Spa & Wellness' },
-        { icon: <Leaf className="w-6 h-6" />, title: 'Golf Course Access' },
+        { icon: <Building className="w-6 h-6" />, title: 'Flexible Displays' },
+        { icon: <Eye className="w-6 h-6" />, title: 'Clear Sightlines' },
+        { icon: <Leaf className="w-6 h-6" />, title: 'Warm, Natural Finishes' },
+        { icon: <Droplet className="w-6 h-6" />, title: 'Low Maintenance' },
       ],
     },
-    resort: {
-      name: 'Palm Retreat',
-      tagline: 'Resort-Style Living, Palm Jumeirah',
-      mainImage: 'https://images.unsplash.com/photo-1565613469091-797f8c97e9dd?q=80&w=927&auto=format&fit=crop',
-      description: 'Palm Retreat brings resort-style luxury to everyday living on the iconic Palm Jumeirah. With direct beach access, world-class amenities, and meticulously designed spaces, residents enjoy a permanent vacation lifestyle in one of the world\'s most exclusive locations.',
+    bedroom: {
+      name: 'Eco Bedroom Retreat',
+      tagline: 'Soft Lighting • Cozy Textures',
+      mainImage: 'https://images.unsplash.com/photo-1526495124232-a04e1849168c?q=80&w=987&auto=format&fit=crop',
+      description: 'A restful bedroom with natural fabrics, muted tones and layered lighting for a serene, rejuvenating atmosphere.',
       stats: {
-        location: 'Palm Jumeirah, Dubai',
-        area: '180,000 sq.ft',
-        year: '2023',
-        architect: 'HOK',
-        client: 'Resort Residential',
+        location: 'Nehrunagar, Puttur',
+        area: '220 sq.ft',
+        year: '2024',
+        architect: 'Green Decors',
+        client: 'Residential Interior',
       },
       gallery: [
-        'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200',
+        'https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200',
+        'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200',
+        'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200',
       ],
       features: [
-        { icon: <Droplet className="w-6 h-6" />, title: 'Beach Access' },
-        { icon: <Home className="w-6 h-6" />, title: 'Resort Amenities' },
-        { icon: <Eye className="w-6 h-6" />, title: 'Sea Views' },
-        { icon: <Building className="w-6 h-6" />, title: 'Marina Access' },
+        { icon: <Leaf className="w-6 h-6" />, title: 'Natural Fabrics' },
+        { icon: <Droplet className="w-6 h-6" />, title: 'Low‑VOC Paints' },
+        { icon: <Home className="w-6 h-6" />, title: 'Smart Storage' },
+        { icon: <Eye className="w-6 h-6" />, title: 'Soft Ambience' },
+      ],
+    },
+    dining: {
+      name: 'Warm Dining Nook',
+      tagline: 'Compact • Comfortable • Inviting',
+      mainImage: 'https://images.unsplash.com/photo-1565613469091-797f8c97e9dd?q=80&w=927&auto=format&fit=crop',
+      description: 'A cozy dining corner with space‑saving seating, warm wood tones and simple lighting for everyday meals.',
+      stats: {
+        location: 'Puttur, Karnataka',
+        area: '140 sq.ft',
+        year: '2023',
+        architect: 'Green Decors',
+        client: 'Residential Interior',
+      },
+      gallery: [
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
+        'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200',
+        'https://images.unsplash.com/photo-1615875474908-9c6f0c8ff99f?w=1200',
+      ],
+      features: [
+        { icon: <Home className="w-6 h-6" />, title: 'Built‑in Seating' },
+        { icon: <Leaf className="w-6 h-6" />, title: 'Warm Wood Tones' },
+        { icon: <Eye className="w-6 h-6" />, title: 'Cozy Ambience' },
+        { icon: <Droplet className="w-6 h-6" />, title: 'Easy Maintenance' },
       ],
     },
   };
 
-  const project = projects[projectId] || projects.residential;
+  const project = projects[projectId] || projects['living-room'];
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
@@ -263,13 +262,13 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
       <div className="py-12 md:py-24 px-4 md:px-12 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight">
-            Interested in similar developments?
+            Interested in similar interiors?
           </h2>
           <button
             onClick={onNavigate}
             className="px-8 py-3 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-100 transition-all"
           >
-            Explore More Projects
+            Explore More Interiors
           </button>
         </div>
       </div>

@@ -7,34 +7,34 @@ interface ServicesPageProps {
 function ServicesPage({ onNavigate }: ServicesPageProps) {
   const services = [
     {
-      icon: <Building2 className="w-12 h-12" />,
-      title: 'Property Development',
-      description: 'End-to-end development of luxury residential and commercial properties tailored to modern living.',
+      icon: <Palette className="w-12 h-12" />,
+      title: 'Residential Interiors',
+      description: 'Living rooms, bedrooms, kitchens and full-home makeovers with sustainable materials and warm palettes.',
     },
     {
       icon: <Ruler className="w-12 h-12" />,
-      title: 'Architectural Design',
-      description: 'Award-winning architectural concepts that blend aesthetics with functionality and cultural context.',
+      title: 'Modular Kitchens',
+      description: 'Space-efficient kitchen planning, cabinetry, lighting and finishes tailored to your daily workflow.',
     },
     {
-      icon: <Palette className="w-12 h-12" />,
-      title: 'Interior Curation',
-      description: 'Bespoke interior design services creating sophisticated spaces that reflect your unique style.',
-    },
-    {
-      icon: <MessageSquare className="w-12 h-12" />,
-      title: 'Property Consultation',
-      description: 'Expert guidance on investment opportunities, market trends, and portfolio optimization.',
-    },
-    {
-      icon: <Cpu className="w-12 h-12" />,
-      title: 'Smart Living Integration',
-      description: 'Cutting-edge home automation and IoT solutions for seamless, intelligent living experiences.',
+      icon: <Building2 className="w-12 h-12" />,
+      title: 'Commercial Spaces',
+      description: 'Boutiques, studios and offices designed for brand impact, comfort and efficient circulation.',
     },
     {
       icon: <Leaf className="w-12 h-12" />,
-      title: 'Sustainable Projects',
-      description: 'Eco-conscious developments incorporating green building practices and renewable energy solutions.',
+      title: 'Eco Styling & Decor',
+      description: 'Sustainable styling, natural textures, plantscapes and handcrafted accents to elevate any space.',
+    },
+    {
+      icon: <Cpu className="w-12 h-12" />,
+      title: 'Smart Lighting Plans',
+      description: 'Layered lighting with energy‑efficient fixtures for mood, function and visual comfort.',
+    },
+    {
+      icon: <MessageSquare className="w-12 h-12" />,
+      title: 'Renovations & Makeovers',
+      description: 'End‑to‑end upgrades for kitchens, bedrooms and living areas with minimal waste and maximum impact.',
     },
   ];
 
@@ -74,7 +74,7 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=2070&auto=format&fit=crop)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200)',
           }}
         />
         <div className="absolute inset-0 bg-black opacity-40" />
@@ -97,7 +97,7 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
               What We Offer
             </h2>
             <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
-              Comprehensive solutions for luxury real estate development
+              Interior solutions for homes, studios and boutique commercial spaces
             </p>
           </div>
 

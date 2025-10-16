@@ -2,14 +2,15 @@ import { Instagram as InstagramIcon } from 'lucide-react';
 
 function Instagram() {
   const posts = [
-    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=400&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=400&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=400&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=400&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=400&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?q=80&w=400&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=400&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?q=80&w=400&auto=format&fit=crop',
+    // Bedroom + Modern (8)
+    'https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200',
+    'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200',
+    'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200',
+    'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=1200',
+    'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200',
+    'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=1200',
+    'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200',
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200',
   ];
 
   return (
@@ -20,7 +21,7 @@ function Instagram() {
             Follow Our Journey on Instagram
           </h2>
           <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
-            @primeproperties_uae
+            @greendecors.india
           </p>
         </div>
 

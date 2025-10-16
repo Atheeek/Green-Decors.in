@@ -3,13 +3,32 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 function PropertyCarousel() {
   const properties = [
-    'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1974&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1745761320791-5ae142edee8c?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1707189856923-46dd41ea2bdc?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1685648628650-63740d39bffc?q=80&w=1974&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1616012760010-8da02da071fd?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1623298317883-6b70254edf31?q=80&w=2070&auto=format&fit=crop',
+    // Modern Interior Design
+    'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200',
+    'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=1200',
+    'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200',
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200',
+    // Luxury Interior
+    'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200',
+    'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200',
+    'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200',
+    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200',
+    // Home Decor & Details
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
+    'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200',
+    'https://images.unsplash.com/photo-1615875474908-9c6f0c8ff99f?w=1200',
+    // Kitchen/Bath (extra set)
+    'https://images.unsplash.com/photo-1556912167-f556f1f39faa?w=1200',
+    'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200',
+    'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200',
   ];
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -72,7 +91,7 @@ function PropertyCarousel() {
           </h2>
 
           <p className="font-inter-display text-base md:text-lg font-normal leading-tight text-gray-600">
-            In the heart of the UAE, we craft living spaces that reflect the beauty of nature, using wood, stone, and light to create calm, elegant homes.
+            In the heart of Karnataka, we craft living spaces that reflect the beauty of nature, using wood, stone, and light to create calm, elegant homes.
           </p>
         </div>
 
@@ -105,7 +124,7 @@ function PropertyCarousel() {
               <Star className="w-4 h-4" fill="black" />
               <span>4.9</span>
             </button>
-            <button className="px-4 py-2 bg-white border border-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-50 transition-all">
+            <button onClick={() => scrollToSection('reviews')} className="px-4 py-2 bg-white border border-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-50 transition-all">
               See Reviews
             </button>
           </div>

@@ -6,20 +6,20 @@ function Testimonials() {
       name: 'Nasser Al Suwaidi',
       title: 'Managing Director, Suwaidi Holdings',
       rating: 5.0,
-      quote: 'Prime Properties transformed our vision into reality. Their attention to detail and commitment to excellence is unmatched in the UAE real estate market.',
+      quote: 'Green Decors turned our house into a warm, sustainable home. Their attention to detail and eco-conscious materials made all the difference.',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
     },
     {
       name: 'Fatima Al Hashimi',
       title: 'CEO, Emirates Investment Group',
       rating: 4.9,
-      quote: 'Working with Prime Properties was a seamless experience. They delivered a stunning property that exceeded all our expectations, combining luxury with functionality.',
+      quote: 'Working with Green Decors was seamless. They delivered a stunning interior that exceeded our expectations, blending beauty with function.',
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop',
     },
   ];
 
   return (
-    <div className="py-12 md:py-24 px-4 md:px-12 bg-white">
+    <div id="reviews" className="py-12 md:py-24 px-4 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="space-y-6">
           <div className="font-inter-display text-sm font-normal leading-tight text-gray-500">
@@ -27,7 +27,7 @@ function Testimonials() {
           </div>
 
           <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight text-black">
-            Prime Properties Excellence Through Client Eyes
+            Green Decors Through Client Eyes
           </h2>
         </div>
 

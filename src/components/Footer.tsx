@@ -11,14 +11,14 @@ function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           <div className="space-y-6">
             <h3 className="font-inter-display text-xl md:text-2xl font-[400] leading-tight">
-              PRIME PROPERTIES
+              GREEN DECORS
             </h3>
 
             <div className="space-y-3 font-inter-display text-sm font-normal leading-relaxed text-gray-400">
-              <p>Office Address: Sheikh Zayed Road,</p>
-              <p>Dubai, UAE</p>
-              <p>Phone: +971 4 123 4567</p>
-              <p>Email: info@primeproperties.ae</p>
+              <p>Studio: Nehrunagar, Puttur</p>
+              <p>Karnataka, India</p>
+              <p>Phone: +91 00000 00000</p>
+              <p>Email: greendecors.india@gmail.com</p>
             </div>
           </div>
 
@@ -40,7 +40,7 @@ function Footer({ onNavigate }: FooterProps) {
                 onClick={() => onNavigate('services')}
                 className="font-inter-display text-base font-normal leading-tight text-gray-400 hover:text-white transition-colors text-left"
               >
-                Properties
+                Services
               </button>
               <button
                 onClick={() => {
@@ -76,7 +76,7 @@ function Footer({ onNavigate }: FooterProps) {
 
         <div className="pt-6 md:pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
           <p className="font-inter-display text-xs md:text-sm font-normal leading-tight text-gray-400 text-center md:text-left">
-            Copyright © 2024 Prime Properties. All rights reserved.
+            © 2024 Green Decors. All rights reserved.
           </p>
 
           <div className="flex space-x-4">

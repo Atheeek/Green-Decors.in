@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Play, Menu, X } from 'lucide-react';
-import logoimg from '../assets/logo13.png'; // Uncomment this line and provide the correct path to your logo
+import logoimg from '../assets/logo.png'; // Uncomment this line and provide the correct path to your logo
 
 interface HeroSectionProps {
   onNavigate: (page: string) => void;
@@ -8,6 +8,8 @@ interface HeroSectionProps {
 
 function HeroSection({ onNavigate }: HeroSectionProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showLogoSplash, setShowLogoSplash] = useState(true);
+
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -15,12 +17,32 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  useEffect(() => {
+    // Show logo splash for 1.5 seconds before showing hero section
+    const timer = setTimeout(() => {
+      setShowLogoSplash(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Helper to run navigation/scroll and then close the mobile menu
   const handleMobileLinkClick = (action: () => void) => {
     action();
     setIsMobileMenuOpen(false);
   };
+
+  if (showLogoSplash) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <img
+          src={logoimg}
+          alt="Green Decors Logo"
+          className="w-32 h-32 sm:w-40 sm:h-40 object-contain animate-pulse"
+        />
+      </div>
+    );
+  }
+
 
   return (
     <section className="relative min-h-screen bg-gray-50 p-2 sm:p-4">
@@ -42,7 +64,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
            
             <img
               src={logoimg}
-              alt="Prime Properties Logo"
+              alt="Green Decors Logo"
               className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
             /> 
            

@@ -7,29 +7,29 @@ interface OurProjectsProps {
 function OurProjects({ onNavigate }: OurProjectsProps) {
   const projects = [
     {
-      id: 'residential',
-      title: 'Residential',
-      image: 'https://images.unsplash.com/photo-1544092683-c0c9ebb368e5?w=900&auto=format&fit=crop&q=60',
+      id: 'living-room',
+      title: 'Living Room Makeover',
+      image: 'https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=1200',
     },
     {
-      id: 'villas',
-      title: 'Exclusive Villas',
-      image: 'https://images.unsplash.com/photo-1600450575743-43793ba079d3?q=80&w=2073&auto=format&fit=crop',
+      id: 'kitchen',
+      title: 'Minimal Modular Kitchen',
+      image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200',
     },
     {
-      id: 'condos',
-      title: 'High-End Condos',
-      image: 'https://plus.unsplash.com/premium_photo-1661952507078-b620cba09fdb?q=80&w=2070&auto=format&fit=crop',
+      id: 'commercial',
+      title: 'Boutique Store Interior',
+      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200',
     },
     {
-      id: 'mansions',
-      title: 'Modern Mansions',
-      image: 'https://images.unsplash.com/photo-1526495124232-a04e1849168c?q=80&w=987&auto=format&fit=crop',
+      id: 'bedroom',
+      title: 'Eco Bedroom Retreat',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200',
     },
     {
-      id: 'resort',
-      title: 'Resort Properties',
-      image: 'https://images.unsplash.com/photo-1565613469091-797f8c97e9dd?q=80&w=927&auto=format&fit=crop',
+      id: 'dining',
+      title: 'Warm Dining Nook',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200',
     },
   ];
 
@@ -42,12 +42,12 @@ function OurProjects({ onNavigate }: OurProjectsProps) {
               Our Project
             </div>
             <h2 className="font-inter-display text-3xl md:text-4xl font-normal leading-tight text-black max-w-2xl">
-              Explore Our Portfolio: The Best of UAE Real Estate.
+              Explore Our Work: Sustainable Interiors by Green Decors
             </h2>
           </div>
 
           <p className="font-inter-display text-sm font-normal leading-tight text-gray-500 max-w-md">
-            Immerse yourself in Prime Properties' exclusive developments, each a symbol of excellence in real estate.
+            A curated selection of interiors—designed with natural materials, warm palettes, and thoughtful details.
           </p>
         </div>
 
