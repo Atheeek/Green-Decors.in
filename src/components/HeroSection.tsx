@@ -58,8 +58,8 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
         <div className="absolute inset-0 bg-black opacity-20" />
 
         {/* Navigation Bar */}
-        <nav className="relative z-20 flex items-center justify-between px-4 sm:px-8 lg:px-12 py-4 sm:py-6">
-          <div className="flex items-center gap-2">
+        <nav className="relative  z-20 flex items-center justify-between px-4 sm:px-8 lg:px-12 py-4 sm:py-6">
+          <div className="flex pt-5 md:pt-0 items-center gap-2">
             {/* Using a placeholder div for the logo as in the original code. 
                 Replace with the <img> tag below if you have a logo file. */}
            
@@ -88,7 +88,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
             aria-controls="mobile-menu"
             aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
         </nav>
 
@@ -110,7 +110,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
         )}
 
         {/* Hero Content */}
-        <div className="relative z-10 px-4 sm:px-8 lg:px-12 md:mt-10 mt-40 flex items-center h-[calc(100%-80px)] sm:h-[calc(100%-100px)]">
+        <div className="relative z-10 px-4 sm:px-8 lg:px-12 md:mt-10 mt-36 flex items-center h-[calc(100%-80px)] sm:h-[calc(100%-100px)]">
           <div className="max-w-4xl">
             <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-inter-display font-medium leading-tight mb-6 sm:mb-8">
               Discover the art of eco conscious interior design with Green Decors.

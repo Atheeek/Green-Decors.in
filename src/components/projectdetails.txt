@@ -1,0 +1,228 @@
+import { ArrowLeft, MapPin, Calendar, User, Building, Maximize, Droplet, Home, Eye, Leaf, Quote, Star } from 'lucide-react';
+import { useState } from 'react';
+
+interface ProjectDetailsPageProps {
+  projectId: string;
+  onNavigate: () => void;
+}
+
+function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) {
+  const projects: Record<string, any> = {
+    'living-room': {
+      name: 'Living Room Makeover',
+      tagline: 'Warm, Natural Textures • Nehrunagar, Puttur',
+      mainImage: 'https://images.unsplash.com/photo-1544092683-c0c9ebb368e5?w=900&auto=format&fit=crop&q=60',
+      description: 'A calm living space designed around natural light, sustainable materials and comfortable seating—merging function with a timeless look.',
+      clientVision: "The client wanted a serene, clutter-free living room to unwind and entertain guests. They emphasized natural elements and a connection to the outdoors.",
+      ourApproach: "We focused on an open layout, maximizing sunlight with sheer curtains. A palette of earthy tones, oak wood, and linen upholstery creates a calming atmosphere.",
+      beforeImage: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1170', // Placeholder before image
+      afterImage: 'https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200',
+      stats: { location: 'Nehrunagar, Puttur, Karnataka', area: '420 sq.ft', year: '2025', architect: 'Green Decors', client: 'Residential Interior' },
+      gallery: ['https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200', 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200', 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200', 'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=1200'],
+      features: [{ icon: <Leaf />, title: 'Sustainable Materials' }, { icon: <Home />, title: 'Optimized Layout' }, { icon: <Eye />, title: 'Natural Light' }, { icon: <Droplet />, title: 'Low‑VOC Finishes' }],
+      materials: [{ name: 'Oak Wood', desc: 'For flooring and custom furniture' }, { name: 'Linen Fabric', desc: 'Used for curtains and sofa upholstery' }, { name: 'Clay Plaster', desc: 'On accent walls for a soft texture' }],
+      testimonial: { quote: "Green Decors transformed our vision into a reality we couldn't have imagined. The space feels both beautiful and incredibly personal.", author: "A. & S. Kumar" }
+    },
+    kitchen: {
+        name: 'Minimal Modular Kitchen',
+        tagline: 'Efficient Storage • Easy Maintenance',
+        mainImage: 'https://images.unsplash.com/photo-1600450575743-43793ba079d3?q=80&w=2073&auto=format&fit=crop',
+        description: 'A modular kitchen planned for workflow: efficient storage, durable surfaces and warm tones for everyday cooking and gathering.',
+        clientVision: "The goal was a highly functional, low-maintenance kitchen that felt open and integrated with the dining area, without compromising on modern aesthetics.",
+        ourApproach: "We implemented a 'work triangle' layout for efficiency. High-gloss, handleless cabinets were chosen for their sleek look and easy cleaning, paired with durable quartz countertops.",
+        beforeImage: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1170', // Placeholder
+        afterImage: 'https://images.unsplash.com/photo-1556912167-f556f1f39faa?w=1200',
+        stats: { location: 'Puttur, Karnataka', area: '160 sq.ft', year: '2025', architect: 'Green Decors', client: 'Kitchen Renovation' },
+        gallery: ['https://images.unsplash.com/photo-1556912167-f556f1f39faa?w=1200', 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1200', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200', 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1200'],
+        features: [{ icon: <Maximize />, title: 'Space‑Smart Storage' }, { icon: <Droplet />, title: 'Easy‑Clean Surfaces' }, { icon: <Leaf />, title: 'Energy‑Efficient Lighting' }, { icon: <Home />, title: 'Ergonomic Workflow' }],
+        materials: [{ name: 'Quartz Countertops', desc: 'For durability and stain resistance' }, { name: 'Acrylic Finish Cabinets', desc: 'For a seamless, modern look' }, { name: 'Matte Black Fixtures', desc: 'To add a touch of contrast' }],
+        testimonial: { quote: "Our new kitchen is a dream. It's not just beautiful; it's incredibly practical. The design process was smooth and professional from start to finish.", author: "R. Sharma" }
+    },
+    // Add similar new fields (clientVision, ourApproach, etc.) to your other project objects
+  };
+
+  const project = projects[projectId] || projects['living-room'];
+  const otherProjects = Object.keys(projects)
+    .filter(key => key !== projectId)
+    .map(key => ({ id: key, ...projects[key] }))
+    .slice(0, 3); // Show up to 3 related projects
+
+  return (
+    <div className="min-h-screen bg-white animate-fadeIn">
+      <button
+        onClick={onNavigate}
+        aria-label="Go Back"
+        className="fixed top-6 left-6 z-50 w-12 h-12 bg-white/80 backdrop-blur-sm shadow-lg rounded-full flex items-center justify-center hover:bg-white hover:scale-105 transition-all duration-300"
+      >
+        <ArrowLeft className="w-5 h-5 text-gray-800" />
+      </button>
+
+      {/* --- Hero Section --- */}
+      <div className="relative h-[70vh]">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${project.mainImage})` }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-12 md:pb-16 max-w-7xl mx-auto">
+          <h1 className="text-white font-inter-display font-semibold leading-tight text-4xl md:text-5xl lg:text-6xl mb-3">
+            {project.name}
+          </h1>
+          <p className="text-gray-200 font-inter-display text-lg md:text-xl font-normal">
+            {project.tagline}
+          </p>
+        </div>
+      </div>
+
+      <div className="py-16 md:py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          
+          {/* --- Project Overview & Stats --- */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 mb-16 md:mb-24">
+            <div className="lg:col-span-2 space-y-4">
+              <h2 className="font-inter-display text-3xl font-medium text-black">Project Overview</h2>
+              <p className="font-inter-display text-lg leading-relaxed text-gray-600">{project.description}</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-2xl space-y-5 border border-gray-200/80">
+                <StatItem icon={<MapPin/>} label="Location" value={project.stats.location} />
+                <StatItem icon={<Maximize/>} label="Area" value={project.stats.area} />
+                <StatItem icon={<Calendar/>} label="Completion Year" value={project.stats.year} />
+                <StatItem icon={<User/>} label="Designer" value={project.stats.architect} />
+                <StatItem icon={<Building/>} label="Client Type" value={project.stats.client} />
+            </div>
+          </div>
+
+          {/* --- NEW: Client Vision & Our Approach --- */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-gray-50 p-8 md:p-12 rounded-2xl mb-16 md:mb-24">
+            <div>
+              <h3 className="font-inter-display text-2xl font-medium text-black mb-3">The Client's Vision</h3>
+              <p className="font-inter-display text-lg leading-relaxed text-gray-600">{project.clientVision}</p>
+            </div>
+            <div>
+              <h3 className="font-inter-display text-2xl font-medium text-black mb-3">Our Approach</h3>
+              <p className="font-inter-display text-lg leading-relaxed text-gray-600">{project.ourApproach}</p>
+            </div>
+          </div>
+
+          {/* --- NEW: Material Palette --- */}
+          {project.materials && (
+            <div className="mb-16 md:mb-24">
+              <h2 className="font-inter-display text-3xl font-medium text-center text-black mb-12">Material Palette</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                {project.materials.map((mat: any, i: number) => (
+                  <div key={i} className="border border-gray-200 rounded-lg p-6 text-center">
+                    <h4 className="text-xl font-medium text-black">{mat.name}</h4>
+                    <p className="text-gray-600 mt-1">{mat.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* --- Project Gallery --- */}
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-inter-display text-3xl font-medium text-center text-black mb-12">Project Gallery</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {project.gallery.map((image: string, index: number) => (
+                <div key={index} className="relative aspect-[4/5] rounded-lg overflow-hidden group">
+                  <img src={image} alt={`Gallery ${index + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* --- NEW: Before & After --- */}
+          {project.beforeImage && (
+            <div className="mb-16 md:mb-24">
+              <h2 className="font-inter-display text-3xl font-medium text-center text-black mb-12">The Transformation</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-center text-lg font-medium text-gray-500 mb-3">Before</h4>
+                  <img src={project.beforeImage} alt="Before" className="w-full h-full object-cover rounded-lg"/>
+                </div>
+                <div>
+                  <h4 className="text-center text-lg font-medium text-black mb-3">After</h4>
+                  <img src={project.afterImage} alt="After" className="w-full h-full object-cover rounded-lg"/>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* --- Key Features --- */}
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-inter-display text-3xl font-medium text-center text-black mb-12">Key Features</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {project.features.map((feature: any, index: number) => (
+                <div key={index} className="flex flex-col items-center text-center space-y-3">
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center text-black">
+                    {React.cloneElement(feature.icon, { className: 'w-7 h-7' })}
+                  </div>
+                  <span className="font-inter-display text-base font-medium text-black">{feature.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* --- NEW: Client Testimonial --- */}
+          {project.testimonial && (
+            <div className="bg-gray-900 text-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto mb-16 md:mb-24 text-center">
+                <Quote className="w-10 h-10 text-gray-500 mx-auto mb-4" />
+                <p className="text-2xl md:text-3xl leading-snug font-medium mb-6">"{project.testimonial.quote}"</p>
+                <p className="text-gray-400 font-medium">— {project.testimonial.author}</p>
+            </div>
+          )}
+
+          {/* --- NEW: Related Projects --- */}
+          <div>
+            <h2 className="font-inter-display text-3xl font-medium text-center text-black mb-12">More Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {otherProjects.map(p => (
+                    <div key={p.id} className="group cursor-pointer" onClick={onNavigate}>
+                        <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
+                            <img src={p.mainImage} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        </div>
+                        <h4 className="text-xl font-medium text-black group-hover:underline">{p.name}</h4>
+                        <p className="text-gray-500">{p.tagline}</p>
+                    </div>
+                ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* --- CTA Section --- */}
+      <div className="py-16 md:py-24 px-6 md:px-12 bg-black text-white">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Let's collaborate to create a space that is uniquely yours. Contact us today for a consultation.
+          </p>
+          <button
+            onClick={onNavigate}
+            className="px-10 py-4 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-200 transition-all transform hover:scale-105"
+          >
+            Get In Touch
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+// Helper component for stat items to reduce repetition
+const StatItem = ({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) => (
+    <div className="flex items-start space-x-3">
+        <div className="text-gray-400 mt-1">{React.cloneElement(icon as React.ReactElement, { className: 'w-5 h-5' })}</div>
+        <div>
+            <div className="font-inter-display text-sm font-normal text-gray-500">{label}</div>
+            <div className="font-inter-display text-base font-medium text-black">{value}</div>
+        </div>
+    </div>
+);
+
+// Helper component for cloning icon classNames
+import React from 'react';
+// Make sure to add `import React from 'react';` at the top of your file.
+
+export default ProjectDetailsPage;
