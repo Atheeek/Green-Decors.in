@@ -27,6 +27,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
 
   // Helper to run navigation/scroll and then close the mobile menu
   const handleMobileLinkClick = (action: () => void) => {
+    
     action();
     setIsMobileMenuOpen(false);
   };
@@ -45,7 +46,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
 
 
   return (
-    <section className="relative min-h-screen bg-gray-50 p-2 sm:p-4">
+    <section className="relative min-h-screen bg-gray-0 p-2 sm:p-4">
       <div className="relative h-screen rounded-2xl sm:rounded-3xl overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -54,7 +55,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
               'url(https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop)',
           }}
         />
-        <div className="absolute inset-0 bg-black opacity-30" />
+        <div className="absolute inset-0 bg-black opacity-20" />
 
         {/* Navigation Bar */}
         <nav className="relative z-20 flex items-center justify-between px-4 sm:px-8 lg:px-12 py-4 sm:py-6">
@@ -95,7 +96,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
         {isMobileMenuOpen && (
           <div
             id="mobile-menu"
-            className="absolute top-20 left-4 right-4 z-20 bg-black/10 backdrop-blur-md rounded-2xl p-6 lg:hidden border border-white/20"
+            className="absolute top-20 left-4  right-4 z-20 bg-black/10 backdrop-blur-md rounded-2xl p-6 lg:hidden border border-white/20"
           >
            <div className="flex flex-col space-y-4">
               <button onClick={() => handleMobileLinkClick(() => scrollToSection('home'))} className="text-white text-left py-2 hover:text-gray-300">Home</button>

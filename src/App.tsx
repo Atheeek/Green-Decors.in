@@ -12,6 +12,8 @@ import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ProjectDetailsPage from './pages/ProjectDetailsPage';
+import FAQSection from "./components/FAQSection";
+
 
 type Page = 'home' | 'about' | 'services' | 'project-details';
 
@@ -58,6 +60,8 @@ function App() {
       <OurProjects onNavigate={navigateToPage} />
       <WhoWeAre />
       <Testimonials />
+      <FAQSection />
+
       <ContactForm />
       <Instagram />
       <Footer onNavigate={navigateToPage} />
