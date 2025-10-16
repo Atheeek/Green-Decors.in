@@ -13,6 +13,7 @@ import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import FAQSection from "./components/FAQSection";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 
 type Page = 'home' | 'about' | 'services' | 'project-details';
@@ -54,6 +55,8 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection onNavigate={navigateToPage} />
+      <ScrollToTopButton />
+
       <PropertyCarousel />
       <PropertyGateway />
       <LogoCloud />

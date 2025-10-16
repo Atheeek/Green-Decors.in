@@ -80,15 +80,14 @@ const FAQSection: React.FC = () => {
             <AnimatePresence initial={false}>
               {openIndex === index && (
                 <motion.div
-                  key="content"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="px-6 pb-5 text-gray-600 text-sm leading-relaxed"
-                >
-                  {faq.answer}
-                </motion.div>
+                initial={{ maxHeight: 0, opacity: 0 }}
+                animate={{ maxHeight: openIndex === index ? 500 : 0, opacity: openIndex === index ? 1 : 0 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                className="px-6 pb-5 text-gray-600 text-sm leading-relaxed overflow-hidden"
+              >
+                {faq.answer}
+              </motion.div>
+              
               )}
             </AnimatePresence>
           </div>
