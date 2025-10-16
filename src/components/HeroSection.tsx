@@ -72,7 +72,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <div className="hidden lg:flex items-center text-xl gap-6 xl:gap-8">
             <button onClick={() => scrollToSection('home')} className="text-white font-inter-display hover:underline underline-offset-4">Home</button>
             <button onClick={() => onNavigate('about')} className="text-white font-inter-display hover:underline underline-offset-4">About Us</button>
             <button onClick={() => scrollToSection('projects')} className="text-white font-inter-display hover:underline underline-offset-4">Projects</button>
