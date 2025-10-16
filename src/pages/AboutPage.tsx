@@ -74,19 +74,19 @@ function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="absolute inset-0 bg-black opacity-30" />
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-12 max-w-4xl mx-auto">
-          <div className="font-['Inter_Display'] text-sm font-normal leading-tight text-gray-300 uppercase mb-4">
+          <div className="font-inter-display text-sm font-normal leading-tight text-gray-300 uppercase mb-4">
             About Prime Properties
           </div>
 
-          <h1 className="text-white font-['Inter_Display'] font-medium leading-tight text-3xl md:text-5xl lg:text-6xl mb-6">
+          <h1 className="text-white font-inter-display font-medium leading-tight text-3xl md:text-5xl lg:text-6xl mb-6">
             Crafting Legacies in Luxury Real Estate
           </h1>
 
-          <p className="text-gray-200 font-['Inter_Display'] text-base md:text-lg font-normal leading-relaxed max-w-2xl mb-8">
+          <p className="text-gray-200 font-inter-display text-base md:text-lg font-normal leading-relaxed max-w-2xl mb-8">
             For over two decades, we've been transforming the UAE's skyline with architectural masterpieces that blend innovation, sustainability, and timeless elegance.
           </p>
 
-          <button className="px-8 py-3 bg-white text-black rounded-lg font-['Inter_Display'] font-medium leading-tight hover:bg-gray-100 transition-all">
+          <button className="px-8 py-3 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-100 transition-all">
             Learn More
           </button>
         </div>
@@ -117,17 +117,17 @@ function AboutPage({ onNavigate }: AboutPageProps) {
           </div>
 
           <div className="space-y-6">
-            <h2 className="font-['Inter_Display'] text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black">
+            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black">
               Our Story
             </h2>
 
             <div className="h-px bg-gray-200 w-24" />
 
-            <p className="font-['Inter_Display'] text-base md:text-lg font-normal leading-relaxed text-gray-600">
+            <p className="font-inter-display text-base md:text-lg font-normal leading-relaxed text-gray-600">
               Founded in 2000, Prime Properties emerged from a vision to redefine luxury living in the UAE. Our journey began with a single residential tower in Dubai Marina and has since expanded to over 150 iconic developments across the Emirates.
             </p>
 
-            <p className="font-['Inter_Display'] text-base md:text-lg font-normal leading-relaxed text-gray-600">
+            <p className="font-inter-display text-base md:text-lg font-normal leading-relaxed text-gray-600">
               We specialize in creating architectural landmarks that harmonize modern design with cultural heritage, sustainable practices with luxury amenities, and innovation with timeless elegance. Each project reflects our commitment to excellence and our deep understanding of what makes a house a home.
             </p>
           </div>
@@ -137,10 +137,10 @@ function AboutPage({ onNavigate }: AboutPageProps) {
       <div className="py-12 md:py-24 px-4 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-['Inter_Display'] text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
+            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
               Our Values
             </h2>
-            <p className="font-['Inter_Display'] text-lg font-normal leading-tight text-gray-600">
+            <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
               The principles that guide everything we do
             </p>
           </div>
@@ -152,10 +152,10 @@ function AboutPage({ onNavigate }: AboutPageProps) {
                 className="bg-white p-8 rounded-2xl space-y-4 hover:shadow-lg transition-shadow"
               >
                 <div className="text-black">{value.icon}</div>
-                <h3 className="font-['Inter_Display'] text-xl font-[500] leading-tight text-black">
+                <h3 className="font-inter-display text-xl font-[500] leading-tight text-black">
                   {value.title}
                 </h3>
-                <p className="font-['Inter_Display'] text-sm font-normal leading-relaxed text-gray-600">
+                <p className="font-inter-display text-sm font-normal leading-relaxed text-gray-600">
                   {value.description}
                 </p>
               </div>
@@ -167,10 +167,10 @@ function AboutPage({ onNavigate }: AboutPageProps) {
       <div className="py-12 md:py-24 px-4 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-['Inter_Display'] text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
+            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
               Leadership Team
             </h2>
-            <p className="font-['Inter_Display'] text-lg font-normal leading-tight text-gray-600">
+            <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
               Visionaries shaping the future of luxury real estate
             </p>
           </div>
@@ -189,13 +189,13 @@ function AboutPage({ onNavigate }: AboutPageProps) {
                   />
                 </div>
                 <div>
-                  <h3 className="font-['Inter_Display'] text-lg font-semibold leading-tight text-black">
+                  <h3 className="font-inter-display text-lg font-semibold leading-tight text-black">
                     {leader.name}
                   </h3>
-                  <p className="font-['Inter_Display'] text-sm font-normal leading-tight text-gray-600 mb-2">
+                  <p className="font-inter-display text-sm font-normal leading-tight text-gray-600 mb-2">
                     {leader.title}
                   </p>
-                  <p className="font-['Inter_Display'] text-xs font-normal leading-tight text-gray-500 italic">
+                  <p className="font-inter-display text-xs font-normal leading-tight text-gray-500 italic">
                     "{leader.quote}"
                   </p>
                 </div>
@@ -207,12 +207,12 @@ function AboutPage({ onNavigate }: AboutPageProps) {
 
       <div className="py-12 md:py-24 px-4 md:px-12 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="font-['Inter_Display'] text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight">
+          <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight">
             Let's Build Your Dream Property Today
           </h2>
           <button
             onClick={onNavigate}
-            className="px-8 py-3 bg-white text-black rounded-lg font-['Inter_Display'] font-medium leading-tight hover:bg-gray-100 transition-all"
+            className="px-8 py-3 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-100 transition-all"
           >
             Contact Us
           </button>

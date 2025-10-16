@@ -80,11 +80,11 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
         <div className="absolute inset-0 bg-black opacity-40" />
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-12 max-w-4xl mx-auto">
-          <h1 className="text-white font-['Inter_Display'] font-medium leading-tight text-6xl mb-6">
+          <h1 className="text-white font-inter-display font-medium leading-tight text-6xl mb-6">
             Our Expertise. Your Vision.
           </h1>
 
-          <p className="text-gray-200 font-['Inter_Display'] text-xl font-normal leading-relaxed max-w-3xl">
+          <p className="text-gray-200 font-inter-display text-xl font-normal leading-relaxed max-w-3xl">
             Delivering architectural brilliance and unmatched value through innovation and design.
           </p>
         </div>
@@ -93,10 +93,10 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
       <div className="py-12 md:py-24 px-4 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-['Inter_Display'] text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-black mb-4">
+            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
               What We Offer
             </h2>
-            <p className="font-['Inter_Display'] text-lg font-normal leading-tight text-gray-600">
+            <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
               Comprehensive solutions for luxury real estate development
             </p>
           </div>
@@ -108,10 +108,10 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
                 className="p-8 bg-white border border-gray-200 rounded-2xl space-y-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="text-black">{service.icon}</div>
-                <h3 className="font-['Inter_Display'] text-2xl font-semibold leading-tight text-black">
+                <h3 className="font-inter-display text-2xl font-[500] leading-tight text-black">
                   {service.title}
                 </h3>
-                <p className="font-['Inter_Display'] text-base font-normal leading-relaxed text-gray-600">
+                <p className="font-inter-display text-base font-normal leading-relaxed text-gray-600">
                   {service.description}
                 </p>
               </div>
@@ -123,10 +123,10 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
       <div className="py-12 md:py-24 px-4 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-['Inter_Display'] text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-black mb-4">
+            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
               Our Process
             </h2>
-            <p className="font-['Inter_Display'] text-lg font-normal leading-tight text-gray-600">
+            <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
               A proven approach to delivering excellence
             </p>
           </div>
@@ -135,13 +135,13 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
             {process.map((step, index) => (
               <div key={index} className="relative">
                 <div className="space-y-4">
-                  <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center font-['Inter_Display'] text-2xl font-bold">
+                  <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center font-inter-display text-2xl font-[500]">
                     {step.number}
                   </div>
-                  <h3 className="font-['Inter_Display'] text-xl font-semibold leading-tight text-black">
+                  <h3 className="font-inter-display text-xl font-[500] leading-tight text-black">
                     {step.title}
                   </h3>
-                  <p className="font-['Inter_Display'] text-sm font-normal leading-relaxed text-gray-600">
+                  <p className="font-inter-display text-sm font-normal leading-relaxed text-gray-600">
                     {step.description}
                   </p>
                 </div>
@@ -157,12 +157,12 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
 
       <div className="py-12 md:py-24 px-4 md:px-12 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="font-['Inter_Display'] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight">
             Let's Build Your Dream Property Today
           </h2>
           <button
             onClick={onNavigate}
-            className="px-8 py-3 bg-white text-black rounded-lg font-['Inter_Display'] font-medium leading-tight hover:bg-gray-100 transition-all"
+            className="px-8 py-3 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-100 transition-all"
           >
             Contact Us
           </button>

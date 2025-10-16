@@ -22,11 +22,11 @@ function Testimonials() {
     <div className="py-12 md:py-24 px-4 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="space-y-6">
-          <div className="font-['Inter_Display'] text-sm font-normal leading-tight text-gray-500">
+          <div className="font-inter-display text-sm font-normal leading-tight text-gray-500">
             What our client say
           </div>
 
-          <h2 className="font-['Inter_Display'] text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight text-black">
+          <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight text-black">
             Prime Properties Excellence Through Client Eyes
           </h2>
         </div>
@@ -44,23 +44,23 @@ function Testimonials() {
                 <div className="flex-1 space-y-4">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0">
                     <div>
-                      <div className="font-['Inter_Display'] text-base md:text-lg font-[400] leading-tight text-black">
+                      <div className="font-inter-display text-base md:text-lg font-[400] leading-tight text-black">
                         {testimonial.name}
                       </div>
-                      <div className="font-['Inter_Display'] text-sm font-normal leading-tight text-gray-600">
+                      <div className="font-inter-display text-sm font-normal leading-tight text-gray-600">
                         {testimonial.title}
                       </div>
                     </div>
 
                     <div className="flex items-center space-x-1 px-3 py-1 bg-white rounded-lg border border-gray-200">
                       <Star className="w-4 h-4 text-black" fill="black" />
-                      <span className="font-['Inter_Display'] text-sm font-semibold">
+                      <span className="font-inter-display text-sm font-semibold">
                         {testimonial.rating}
                       </span>
                     </div>
                   </div>
 
-                  <p className="font-['Inter_Display'] text-sm md:text-base font-normal leading-relaxed text-gray-700">
+                  <p className="font-inter-display text-sm md:text-base font-normal leading-relaxed text-gray-700">
                     {testimonial.quote}
                   </p>
                 </div>

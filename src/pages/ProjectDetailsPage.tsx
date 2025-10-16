@@ -155,7 +155,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
 
         <div className="relative z-10 flex flex-col justify-end h-full px-4 md:px-12 pb-8 md:pb-16 max-w-7xl mx-auto">
-          <h1 className="text-white font-['Inter_Display'] font-bold leading-tight text-3xl md:text-5xl lg:text-6xl mb-4">
+          <h1 className="text-white font-['Inter_Display'] font-semi-bold leading-tight text-3xl md:text-5xl lg:text-6xl mb-4">
             {project.name}
           </h1>
           <p className="text-gray-200 font-['Inter_Display'] text-base md:text-lg lg:text-xl font-normal leading-tight">
@@ -168,7 +168,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 md:mb-24">
             <div className="space-y-6">
-              <h2 className="font-['Inter_Display'] text-2xl md:text-3xl font-bold leading-tight text-black">
+              <h2 className="font-['Inter_Display'] text-2xl md:text-3xl font-[500] leading-tight text-black">
                 Project Overview
               </h2>
               <p className="font-['Inter_Display'] text-base md:text-lg font-normal leading-relaxed text-gray-600">
@@ -181,7 +181,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
                 <MapPin className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
                   <div className="font-['Inter_Display'] text-sm font-normal text-gray-500">Location</div>
-                  <div className="font-['Inter_Display'] text-base font-semibold text-black">{project.stats.location}</div>
+                  <div className="font-['Inter_Display'] text-base font-[500] text-black">{project.stats.location}</div>
                 </div>
               </div>
 
@@ -189,7 +189,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
                 <Maximize className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
                   <div className="font-['Inter_Display'] text-sm font-normal text-gray-500">Area</div>
-                  <div className="font-['Inter_Display'] text-base font-semibold text-black">{project.stats.area}</div>
+                  <div className="font-['Inter_Display'] text-base font-[500] text-black">{project.stats.area}</div>
                 </div>
               </div>
 
@@ -197,7 +197,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
                 <Calendar className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
                   <div className="font-['Inter_Display'] text-sm font-normal text-gray-500">Completion Year</div>
-                  <div className="font-['Inter_Display'] text-base font-semibold text-black">{project.stats.year}</div>
+                  <div className="font-['Inter_Display'] text-base font-[500] text-black">{project.stats.year}</div>
                 </div>
               </div>
 
@@ -205,7 +205,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
                 <User className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
                   <div className="font-['Inter_Display'] text-sm font-normal text-gray-500">Architect / Designer</div>
-                  <div className="font-['Inter_Display'] text-base font-semibold text-black">{project.stats.architect}</div>
+                  <div className="font-['Inter_Display'] text-base font-[500] text-black">{project.stats.architect}</div>
                 </div>
               </div>
 
@@ -213,14 +213,14 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
                 <Building className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
                   <div className="font-['Inter_Display'] text-sm font-normal text-gray-500">Client Type</div>
-                  <div className="font-['Inter_Display'] text-base font-semibold text-black">{project.stats.client}</div>
+                  <div className="font-['Inter_Display'] text-base font-[500] text-black">{project.stats.client}</div>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="mb-24">
-            <h2 className="font-['Inter_Display'] text-3xl font-bold leading-tight text-black mb-8">
+            <h2 className="font-['Inter_Display'] text-3xl font-[500] leading-tight text-black mb-8">
               Project Gallery
             </h2>
 
@@ -242,7 +242,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
           </div>
 
           <div>
-            <h2 className="font-['Inter_Display'] text-3xl font-bold leading-tight text-black mb-8">
+            <h2 className="font-['Inter_Display'] text-3xl font-[500] leading-tight text-black mb-8">
               Key Features
             </h2>
 
@@ -262,7 +262,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
 
       <div className="py-12 md:py-24 px-4 md:px-12 bg-black text-white">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="font-['Inter_Display'] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          <h2 className="font-['Inter_Display'] text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight">
             Interested in similar developments?
           </h2>
           <button

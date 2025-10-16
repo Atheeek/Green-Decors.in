@@ -44,7 +44,7 @@ function PropertyCarousel() {
 
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <span className="font-['Inter_Display'] text-lg md:text-2xl font-normal leading-tight">
+              <span className="font-inter-display text-lg md:text-2xl font-normal leading-tight">
                 {String(currentIndex + 1).padStart(2, '0')}/
                 {String(properties.length).padStart(2, '0')}
               </span>
@@ -67,11 +67,11 @@ function PropertyCarousel() {
             </div>
           </div>
 
-          <h2 className="font-['Inter_Display'] text-2xl md:text-3xl font-medium leading-tight text-black">
+          <h2 className="font-inter-display text-2xl md:text-3xl font-medium leading-tight text-black">
             Desert Serenity: Elevating Natural Beauty in Urban Spaces
           </h2>
 
-          <p className="font-['Inter_Display'] text-base md:text-lg font-normal leading-tight text-gray-600">
+          <p className="font-inter-display text-base md:text-lg font-normal leading-tight text-gray-600">
             In the heart of the UAE, we craft living spaces that reflect the beauty of nature, using wood, stone, and light to create calm, elegant homes.
           </p>
         </div>
@@ -87,25 +87,25 @@ function PropertyCarousel() {
 
           <div className="grid grid-cols-3 gap-4">
             <div className="text-center">
-              <div className="font-['Inter_Display'] text-2xl md:text-3xl font-bold text-black">150+</div>
-              <div className="font-['Inter_Display'] text-sm font-normal text-gray-500">Iconic Designs</div>
+              <div className="font-inter-display text-2xl md:text-3xl font-bold text-black">150+</div>
+              <div className="font-inter-display text-sm font-normal text-gray-500">Iconic Designs</div>
             </div>
             <div className="text-center">
-              <div className="font-['Inter_Display'] text-2xl md:text-3xl font-bold text-black">700+</div>
-              <div className="font-['Inter_Display'] text-sm font-normal text-gray-500">Satisfied Clients</div>
+              <div className="font-inter-display text-2xl md:text-3xl font-bold text-black">700+</div>
+              <div className="font-inter-display text-sm font-normal text-gray-500">Satisfied Clients</div>
             </div>
             <div className="text-center">
-              <div className="font-['Inter_Display'] text-2xl md:text-3xl font-bold text-black">500+</div>
-              <div className="font-['Inter_Display'] text-sm font-normal text-gray-500">Project Delivered</div>
+              <div className="font-inter-display text-2xl md:text-3xl font-bold text-black">500+</div>
+              <div className="font-inter-display text-sm font-normal text-gray-500">Project Delivered</div>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-3 md:space-x-4">
-            <button className="flex items-center space-x-2 px-4 py-2 bg-white border border-black rounded-lg font-['Inter_Display'] font-medium leading-tight hover:bg-gray-50 transition-all">
+            <button className="flex items-center space-x-2 px-4 py-2 bg-white border border-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-50 transition-all">
               <Star className="w-4 h-4" fill="black" />
               <span>4.9</span>
             </button>
-            <button className="px-4 py-2 bg-white border border-black rounded-lg font-['Inter_Display'] font-medium leading-tight hover:bg-gray-50 transition-all">
+            <button className="px-4 py-2 bg-white border border-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-50 transition-all">
               See Reviews
             </button>
           </div>

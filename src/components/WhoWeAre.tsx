@@ -6,15 +6,15 @@ function WhoWeAre() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-8 md:mb-16">
           <div className="space-y-6 md:space-y-8">
-            <div className="font-['Inter_Display'] text-sm font-normal leading-tight text-gray-500 uppercase">
+            <div className="font-inter-display text-sm font-normal leading-tight text-gray-500 uppercase">
               Who we are
             </div>
 
-            <h2 className="font-['Inter_Display'] text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight text-black">
+            <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight text-black">
               Building the Future of Luxury Living.
             </h2>
 
-            <button className="px-8 py-3 bg-black text-white rounded-lg font-['Inter_Display'] font-medium leading-tight hover:bg-gray-900 transition-all">
+            <button className="px-8 py-3 bg-black text-white rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-900 transition-all">
               Get Started
             </button>
           </div>
@@ -26,7 +26,7 @@ function WhoWeAre() {
               className="w-full h-48 object-cover rounded-2xl"
             />
 
-            <p className="font-['Inter_Display'] text-base md:text-lg font-normal leading-relaxed text-gray-600">
+            <p className="font-inter-display text-base md:text-lg font-normal leading-relaxed text-gray-600">
               Prime Properties is dedicated to creating sophisticated spaces that resonate with purpose and style.
             </p>
           </div>

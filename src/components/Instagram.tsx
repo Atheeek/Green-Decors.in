@@ -16,10 +16,10 @@ function Instagram() {
     <div className="py-12 md:py-24 px-4 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="font-['Inter_Display'] text-2xl md:text-3xl lg:text-4xl font-[400] leading-tight text-black">
+          <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[400] leading-tight text-black">
             Follow Our Journey on Instagram
           </h2>
-          <p className="font-['Inter_Display'] text-lg font-normal leading-tight text-gray-600">
+          <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
             @primeproperties_uae
           </p>
         </div>
@@ -43,7 +43,7 @@ function Instagram() {
         </div>
 
         <div className="text-center">
-          <button className="px-8 py-3 bg-black text-white rounded-lg font-['Inter_Display'] font-medium leading-tight hover:bg-gray-900 transition-all">
+          <button className="px-8 py-3 bg-black text-white rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-900 transition-all">
             View on Instagram
           </button>
         </div>

@@ -42,9 +42,9 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection onNavigate={navigateToPage} />
-      <LogoCloud />
       <PropertyCarousel />
       <PropertyGateway />
+      <LogoCloud />
       <OurProjects onNavigate={navigateToPage} />
       <WhoWeAre />
       <Testimonials />

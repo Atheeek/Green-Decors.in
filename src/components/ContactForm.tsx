@@ -26,15 +26,15 @@ function ContactForm() {
     <div id="contact" className="py-12 md:py-24 px-4 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="space-y-6 md:space-y-8">
-          <div className="font-['Inter_Display'] text-sm font-normal leading-tight text-gray-500">
+          <div className="font-inter-display text-sm font-normal leading-tight text-gray-500">
             Contact Us
           </div>
 
-          <h2 className="font-['Inter_Display'] text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight text-black">
+          <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight text-black">
             Built for the future with us
           </h2>
 
-          <button className="px-8 py-3 bg-black text-white rounded-lg font-['Inter_Display'] font-medium leading-tight hover:bg-gray-900 transition-all">
+          <button className="px-8 py-3 bg-black text-white rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-900 transition-all">
             Contact
           </button>
         </div>
@@ -46,7 +46,7 @@ function ContactForm() {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-['Inter_Display'] text-base focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-inter-display text-base focus:outline-none focus:ring-2 focus:ring-black"
             required
           />
 
@@ -56,7 +56,7 @@ function ContactForm() {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-['Inter_Display'] text-base focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-inter-display text-base focus:outline-none focus:ring-2 focus:ring-black"
             required
           />
 
@@ -66,7 +66,7 @@ function ContactForm() {
             placeholder="Phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-['Inter_Display'] text-base focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-inter-display text-base focus:outline-none focus:ring-2 focus:ring-black"
             required
           />
 
@@ -74,7 +74,7 @@ function ContactForm() {
             name="propertyType"
             value={formData.propertyType}
             onChange={handleChange}
-            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-['Inter_Display'] text-base focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-inter-display text-base focus:outline-none focus:ring-2 focus:ring-black"
             required
           >
             <option value="">Property Type</option>
@@ -89,7 +89,7 @@ function ContactForm() {
             name="location"
             value={formData.location}
             onChange={handleChange}
-            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-['Inter_Display'] text-base focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-inter-display text-base focus:outline-none focus:ring-2 focus:ring-black"
             required
           >
             <option value="">Preferred location</option>
@@ -105,13 +105,13 @@ function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             rows={6}
-            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-['Inter_Display'] text-base focus:outline-none focus:ring-2 focus:ring-black resize-none"
+            className="w-full px-6 py-4 bg-gray-50 rounded-2xl font-inter-display text-base focus:outline-none focus:ring-2 focus:ring-black resize-none"
             required
           />
 
           <button
             type="submit"
-            className="w-full px-8 py-4 bg-black text-white rounded-2xl font-['Inter_Display'] font-medium leading-tight hover:bg-gray-900 transition-all"
+            className="w-full px-8 py-4 bg-black text-white rounded-2xl font-inter-display font-medium leading-tight hover:bg-gray-900 transition-all"
           >
             Submit
           </button>

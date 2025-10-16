@@ -32,15 +32,15 @@ function PropertyGateway() {
 
         <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
           <div className="space-y-4">
-            <div className="font-['Inter_Display'] text-lg font-normal leading-tight text-gray-600 uppercase">
+            <div className="font-inter-display text-lg font-normal leading-tight text-gray-600 uppercase">
               Prime Properties
             </div>
 
-            <h2 className="font-['Inter_Display'] text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-black">
+            <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-black">
               Your Gateway to Luxurious Living in the UAE
             </h2>
 
-            <p className="font-['Inter_Display'] text-base md:text-lg font-normal leading-tight text-gray-600">
+            <p className="font-inter-display text-base md:text-lg font-normal leading-tight text-gray-600">
               Explore an exclusive collection of the UAE's most prestigious properties, where luxury meets innovation.
             </p>
           </div>
@@ -57,7 +57,7 @@ function PropertyGateway() {
                 }`}
               >
                 <span
-                  className={`font-['Inter_Display'] text-lg md:text-xl leading-tight ${
+                  className={`font-inter-display text-lg md:text-xl leading-tight ${
                     activeCategory === index ? 'font-bold text-black' : 'font-normal text-gray-600'
                   }`}
                 >

@@ -38,15 +38,15 @@ function OurProjects({ onNavigate }: OurProjectsProps) {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6 mb-10 md:mb-16">
           <div className="space-y-4">
-            <div className="font-['Inter_Display'] text-lg font-normal leading-tight text-gray-600">
+            <div className="font-inter-display text-lg font-normal leading-tight text-gray-600">
               Our Project
             </div>
-            <h2 className="font-['Inter_Display'] text-3xl md:text-4xl font-normal leading-tight text-black max-w-2xl">
+            <h2 className="font-inter-display text-3xl md:text-4xl font-normal leading-tight text-black max-w-2xl">
               Explore Our Portfolio: The Best of UAE Real Estate.
             </h2>
           </div>
 
-          <p className="font-['Inter_Display'] text-sm font-normal leading-tight text-gray-500 max-w-md">
+          <p className="font-inter-display text-sm font-normal leading-tight text-gray-500 max-w-md">
             Immerse yourself in Prime Properties' exclusive developments, each a symbol of excellence in real estate.
           </p>
         </div>
@@ -62,7 +62,7 @@ function OurProjects({ onNavigate }: OurProjectsProps) {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-              <span className="font-['Inter_Display'] text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
+              <span className="font-inter-display text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
                 {projects[0].title}
               </span>
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -81,7 +81,7 @@ function OurProjects({ onNavigate }: OurProjectsProps) {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-              <span className="font-['Inter_Display'] text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
+              <span className="font-inter-display text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
                 {projects[1].title}
               </span>
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -100,7 +100,7 @@ function OurProjects({ onNavigate }: OurProjectsProps) {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-              <span className="font-['Inter_Display'] text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
+              <span className="font-inter-display text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
                 {projects[2].title}
               </span>
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -119,7 +119,7 @@ function OurProjects({ onNavigate }: OurProjectsProps) {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-              <span className="font-['Inter_Display'] text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
+              <span className="font-inter-display text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
                 {projects[3].title}
               </span>
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -138,7 +138,7 @@ function OurProjects({ onNavigate }: OurProjectsProps) {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-              <span className="font-['Inter_Display'] text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
+              <span className="font-inter-display text-white font-medium bg-black/30 backdrop-blur-sm px-3 py-1 rounded-lg">
                 {projects[4].title}
               </span>
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
