@@ -85,49 +85,55 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
         </nav>
 
         {isMobileMenuOpen && (
-          <div
-            id="mobile-menu"
-            className="relative z-10 lg:hidden px-4 md:px-12 pb-4"
-          >
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 space-y-2 border border-white/30">
-              <button
-                onClick={() => handleNavigate(() => scrollToSection('home'))}
-                className="w-full text-left px-3 py-2 rounded-lg hover:bg-white text-black"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => handleNavigate(() => onNavigate('about'))}
-                className="w-full text-left px-3 py-2 rounded-lg hover:bg-white text-black"
-              >
-                About Us
-              </button>
-              <button
-                onClick={() => handleNavigate(() => scrollToSection('projects'))}
-                className="w-full text-left px-3 py-2 rounded-lg hover:bg-white text-black"
-              >
-                Product
-              </button>
-              <button
-                onClick={() => handleNavigate(() => onNavigate('services'))}
-                className="w-full text-left px-3 py-2 rounded-lg hover:bg-white text:black"
-              >
-                Store
-              </button>
-              <button
-                onClick={() => handleNavigate(() => scrollToSection('contact'))}
-                className="w-full text-left px-3 py-2 rounded-lg hover:bg-white text-black"
-              >
-                Contact
-              </button>
-              <button className="w-full bg-black text-white px-4 py-2 rounded-[15px] font-['Inter_Display'] font-normal leading-tight hover:bg-black/90 transition-all">
-                Get Started
-              </button>
+          <div id="mobile-menu" className="lg:hidden fixed inset-0 z-20">
+            <button
+              aria-label="Close menu"
+              className="absolute inset-0 bg-black/30"
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{ animation: 'fadeIn 200ms ease-out' }}
+            />
+            <div className="absolute top-20 left-0 right-0 px-4 md:px-12">
+              <div className="bg-white/15 rounded-2xl p-4 space-y-2 border border-white/30"
+                   style={{ animation: 'slideDown 220ms ease-out' }}>
+                <button
+                  onClick={() => handleNavigate(() => scrollToSection('home'))}
+                  className="w-full text-left px-3 py-2 rounded-lg hover:bg-white/20 text-white"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => handleNavigate(() => onNavigate('about'))}
+                  className="w-full text-left px-3 py-2 rounded-lg hover:bg-white/20 text-white"
+                >
+                  About Us
+                </button>
+                <button
+                  onClick={() => handleNavigate(() => scrollToSection('projects'))}
+                  className="w-full text-left px-3 py-2 rounded-lg hover:bg-white/20 text-white"
+                >
+                  Product
+                </button>
+                <button
+                  onClick={() => handleNavigate(() => onNavigate('services'))}
+                  className="w-full text-left px-3 py-2 rounded-lg hover:bg-white/20 text-white"
+                >
+                  Store
+                </button>
+                <button
+                  onClick={() => handleNavigate(() => scrollToSection('contact'))}
+                  className="w-full text-left px-3 py-2 rounded-lg hover:bg-white/20 text-white"
+                >
+                  Contact
+                </button>
+                <button className="w-full bg-white/90 text-black px-4 py-2 rounded-[15px] font-['Inter_Display'] font-normal leading-tight hover:bg-white">
+                  Get Started
+                </button>
+              </div>
             </div>
           </div>
         )}
 
-        <div className="relative z-10 flex flex-col md:pt-20 pt-[315px] justify-center h-[calc(100%-120px)] px-4 md:px-12 max-w-4xl">
+        <div className="relative z-10 flex flex-col md:pt-20 justify-center h-[calc(100%-120px)] px-4 md:px-12 max-w-4xl">
           <h1 className="text-white font-['Inter_Display'] font-medium leading-tight text-4xl md:text-6xl lg:text-6xl mb-6 md:mb-8">
           Discover the art of eco conscious interior design with Green Decors.
           </h1>

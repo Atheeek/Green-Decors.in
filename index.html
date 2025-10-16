@@ -2,12 +2,101 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UAE Luxury Real Estate Website</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Green Decors India | Sustainable Interior Design Studio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/green-decors-logo.png" />
+
+    <!-- Meta Description for SEO -->
+    <meta
+      name="description"
+      content="Green Decors is a luxury interior design studio in Nehrunagar, Puttur, Karnataka. We specialize in eco-conscious interiors that blend sustainability with timeless elegance."
+    />
+
+    <!-- Keywords for SEO -->
+    <meta
+      name="keywords"
+      content="Green Decors India, Interior Design Studio, Sustainable Interiors, Luxury Home Design, Puttur Karnataka, Eco-friendly Decor, Modern Interior Design"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="Green Decors India" />
+
+    <!-- Social Preview -->
+    <meta property="og:title" content="Green Decors India | Sustainable Interior Design Studio" />
+    <meta
+      property="og:description"
+      content="We're here to inspire and create. Discover the art of eco-conscious interior design with Green Decors India."
+    />
+    <meta property="og:image" content="/assets/green-decors-preview.jpg" />
+    <meta property="og:url" content="https://green-decors-india-w-w0o9.bolt.host" />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts and Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f5f7f2;
+        color: #1c1c1c;
+      }
+
+      .splash-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background: linear-gradient(135deg, #dfe8d8 0%, #f5f7f2 100%);
+      }
+
+      .splash-logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      .splash-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        color: #0b3d2e;
+        margin-bottom: 10px;
+      }
+
+      .splash-tagline {
+        font-size: 1rem;
+        color: #4a4a4a;
+        max-width: 300px;
+      }
+    </style>
   </head>
+
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="splash-screen">
+        <img src="/assets/green-decors-logo.png" alt="Green Decors Logo" class="splash-logo" />
+        <h1 class="splash-title">Green Decors</h1>
+        <p class="splash-tagline">
+          We're here to inspire and create. Discover the art of eco-conscious interior design.
+        </p>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
