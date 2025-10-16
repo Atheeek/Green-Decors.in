@@ -78,8 +78,8 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
            <div className="flex flex-col space-y-4">
               <button onClick={() => handleMobileLinkClick(() => scrollToSection('home'))} className="text-white text-left py-2 hover:text-gray-300">Home</button>
               <button onClick={() => handleMobileLinkClick(() => onNavigate('about'))} className="text-white text-left py-2 hover:text-gray-300">About Us</button>
-              <button onClick={() => handleMobileLinkClick(() => scrollToSection('projects'))} className="text-white text-left py-2 hover:text-gray-300">Product</button>
-              <button onClick={() => handleMobileLinkClick(() => onNavigate('services'))} className="text-white text-left py-2 hover:text-gray-300">Store</button>
+              <button onClick={() => handleMobileLinkClick(() => scrollToSection('projects'))} className="text-white text-left py-2 hover:text-gray-300">Projects</button>
+              <button onClick={() => handleMobileLinkClick(() => onNavigate('services'))} className="text-white text-left py-2 hover:text-gray-300">Services</button>
               <button onClick={() => handleMobileLinkClick(() => scrollToSection('contact'))} className="text-white text-left py-2 hover:text-gray-300">Contact</button>
               <button className="bg-white text-black px-6 py-2.5 rounded-[15px] hover:bg-gray-100 transition mt-2">Get Started</button>
             </div>
