@@ -25,7 +25,7 @@ function WhoWeAre() {
             </button>
           </div>
 
-          <div className="space-y-6">
+          <div  className="space-y-6">
             <img
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
               alt="Luxury House"
@@ -39,11 +39,11 @@ function WhoWeAre() {
         </div>
 
         {/* Video Section */}
-        <div
+        <div id="whoweare"
           onClick={() => setIsVideoOpen(true)}
           className="relative h-[300px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden group cursor-pointer"
         >
-          <img
+          <img 
             src="https://images.unsplash.com/photo-1664711942326-2c3351e215e6?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1117"
             alt="Luxury Patio"
             className="w-full h-full object-cover"

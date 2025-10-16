@@ -28,7 +28,7 @@ const ScrollToTopButton: React.FC = () => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 50 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-6 right-6 z-50 bg-white text-black p-3 sm:p-4 rounded-full shadow-lg hover:bg-gray-800 transition-colors"
+          className="fixed bottom-6 right-6 z-50 bg-white text-black p-3 sm:p-4 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-5 h-5" />

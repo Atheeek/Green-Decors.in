@@ -115,9 +115,9 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
             <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-inter-display font-medium leading-tight mb-6 sm:mb-8">
               Discover the art of eco conscious interior design with Green Decors.
             </h1>
-            <button className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm text-white px-4 sm:px-6  py-2.5 sm:py-3 rounded-[15px] font-inter-display hover:bg-white/20 transition border border-white/20 text-sm sm:text-base">
+            <button onClick={() => handleMobileLinkClick(() => scrollToSection('whoweare'))}  className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm text-white px-4 sm:px-6  py-2.5 sm:py-3 rounded-[15px] font-inter-display hover:bg-white/20 transition border border-white/20 text-sm sm:text-base">
               <Play className="w-5 h-5" fill="white" />
-              <span>Play Video</span>
+              <span >Play Video</span>
             </button>
           </div>
         </div>
