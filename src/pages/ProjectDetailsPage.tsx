@@ -194,7 +194,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 md:mb-24"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             variants={staggerContainer}
           >
             <motion.div className="space-y-6" variants={fadeIn}>
