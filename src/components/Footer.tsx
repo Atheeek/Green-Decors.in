@@ -6,7 +6,7 @@ interface FooterProps {
 
 function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer className="bg-black text-white py-12 md:py-16 px-4 md:px-12">
+    <footer className="bg-black text-white py-12 md:py-16 px-4 md:px-12" role="contentinfo">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           <div className="space-y-6">
@@ -21,12 +21,12 @@ function Footer({ onNavigate }: FooterProps) {
             </h3>
             </div>
 
-            <div className="space-y-3 font-inter-display text-sm font-normal leading-relaxed text-gray-400">
+            <address className="not-italic space-y-3 font-inter-display text-sm font-normal leading-relaxed text-gray-400">
               <p>Studio: Nehrunagar, Puttur</p>
-              <p>Karnataka, India</p>
-              <p>Phone: +91 9874563210</p>
-              <p>Email: greendecors.india@gmail.com</p>
-            </div>
+              <p>Mangalore, Karnataka, India 575001</p>
+              <p>Phone: <a href="tel:+919874563210" className="hover:text-white">+91 9874563210</a></p>
+              <p>Email: <a href="mailto:greendecors.india@gmail.com" className="hover:text-white">greendecors.india@gmail.com</a></p>
+            </address>
           </div>
 
           <div className="space-y-6">
@@ -81,7 +81,16 @@ function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        <div className="pt-6 md:pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+        <div className="pt-6 md:pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+          <div className="w-full md:w-auto">
+            <iframe
+              title="Green Decors India Location"
+              src="https://www.google.com/maps?q=Puttur%20Karnataka&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full md:w-[420px] h-40 rounded-lg border border-gray-800"
+            />
+          </div>
           <p className="font-inter-display text-xs md:text-sm font-normal leading-tight text-gray-400 text-center md:text-left">
             © 2024 Green Decors. All rights reserved.
           </p>

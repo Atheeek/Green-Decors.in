@@ -1,4 +1,5 @@
 import { ArrowLeft, Target, Lightbulb, Award, Users } from 'lucide-react';
+import { useSEO, buildLocalBusinessJsonLd, buildInteriorDesignServiceJsonLd } from '../utils/useSEO';
 import { motion } from 'framer-motion';
 
 interface AboutPageProps {
@@ -6,6 +7,39 @@ interface AboutPageProps {
 }
 
 function AboutPage({ onNavigate }: AboutPageProps) {
+  useSEO({
+    title: 'About Green Decors India - Interior Designers in Puttur, Mangalore',
+    description:
+      'Green Decors India is an eco-conscious interior design studio in Mangalore and Puttur, Karnataka. We craft luxury interiors with sustainable materials and timeless aesthetics.',
+    keywords: [
+      'interior designs in Mangalore',
+      'interior designers in Puttur Karnataka',
+      'home interior decor in Mangalore',
+      'Green Decors India',
+      'eco-friendly interior design',
+    ],
+    canonicalUrl: 'https://www.greendecors.in/about',
+    openGraph: {
+      type: 'website',
+      title: 'About Green Decors India - Interior Designers in Puttur, Mangalore',
+      description:
+        'Eco-conscious interior designers in Mangalore and Puttur crafting luxury spaces with sustainable materials.',
+      url: 'https://www.greendecors.in/about',
+      image: '/favicon.ico',
+      siteName: 'Green Decors India',
+    },
+    twitter: {
+      card: 'summary',
+      title: 'About Green Decors India - Interior Designers in Puttur, Mangalore',
+      description:
+        'Eco-conscious interior designers in Mangalore and Puttur crafting luxury spaces with sustainable materials.',
+      image: '/favicon.ico',
+    },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [buildLocalBusinessJsonLd(), buildInteriorDesignServiceJsonLd()],
+    },
+  });
   const values = [
     { icon: <Target className="w-8 h-8" />, title: 'Transparency', description: 'Clear communication and honest dealings in every transaction.' },
     { icon: <Lightbulb className="w-8 h-8" />, title: 'Innovation', description: 'Pioneering design and smart technology in every project.' },
@@ -111,7 +145,10 @@ function AboutPage({ onNavigate }: AboutPageProps) {
       <div className="space-y-4">
         <motion.img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop"
-          alt="Office"
+          alt="Green Decors India office interior with natural light"
+          loading="lazy"
+          width="600"
+          height="288"
           className="w-full h-48 md:h-72 object-cover rounded-2xl"
           variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           whileHover={{ scale: 1.05 }}
@@ -119,7 +156,10 @@ function AboutPage({ onNavigate }: AboutPageProps) {
         />
         <motion.img
           src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=600&auto=format&fit=crop"
-          alt="Team"
+          alt="Green Decors India design team in studio"
+          loading="lazy"
+          width="600"
+          height="256"
           className="w-full h-48 md:h-64 object-cover rounded-2xl"
           variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           whileHover={{ scale: 1.05 }}
@@ -129,7 +169,10 @@ function AboutPage({ onNavigate }: AboutPageProps) {
       <div className="pt-0 lg:pt-12">
         <motion.img
           src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=600&auto=format&fit=crop"
-          alt="Projects"
+          alt="Interior design project by Green Decors India"
+          loading="lazy"
+          width="600"
+          height="520"
           className="w-full h-full lg:h-[520px] object-cover rounded-2xl"
           variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           whileHover={{ scale: 1.05 }}
@@ -177,7 +220,7 @@ function AboutPage({ onNavigate }: AboutPageProps) {
           {leaders.map((leader, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.2 }} className="space-y-4 group cursor-pointer">
               <div className="relative overflow-hidden rounded-2xl">
-                <motion.img src={leader.image} alt={leader.name} className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" whileHover={{ scale: 1.05 }} />
+                <motion.img src={leader.image} alt={`${leader.name} - ${leader.title} at Green Decors India`} loading="lazy" width="400" height="320" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" whileHover={{ scale: 1.05 }} />
               </div>
               <div>
                 <h3 className="font-inter-display text-2xl font-[500] leading-tight text-black">{leader.name}</h3>

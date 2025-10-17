@@ -86,6 +86,8 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
               onClick={() => scrollToSection('home')}
               src={logoimg}
               alt="Green Decors Logo"
+              width="56"
+              height="56"
               className="w-12 h-12 sm:w-14 sm:h-14 cursor-pointer object-contain"
             />
           </motion.div>

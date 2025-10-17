@@ -1,5 +1,6 @@
 import { ArrowLeft, MapPin, Calendar, User, Building, Maximize, Droplet, Home, Eye, Leaf } from 'lucide-react';
 import { useState } from 'react';
+import { useSEO, buildLocalBusinessJsonLd, buildInteriorDesignServiceJsonLd } from '../utils/useSEO';
 import { motion } from 'framer-motion'; // Import motion
 
 interface ProjectDetailsPageProps {
@@ -8,6 +9,38 @@ interface ProjectDetailsPageProps {
 }
 
 function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) {
+  useSEO({
+    title: 'Interior Designs in Mangalore - Project Details | Green Decors India',
+    description:
+      'Explore detailed interior design projects by Green Decors India across Mangalore and Puttur, Karnataka. Sustainable, modern, and elegant spaces.',
+    keywords: [
+      'interior designs in Mangalore',
+      'interior designers in Puttur Karnataka',
+      'home interior decor in Mangalore',
+      'Green Decors India projects',
+    ],
+    canonicalUrl: 'https://www.greendecors.in/projects',
+    openGraph: {
+      type: 'article',
+      title: 'Interior Designs in Mangalore - Project Details | Green Decors India',
+      description:
+        'Detailed project work from Green Decors India across Mangalore and Puttur, Karnataka.',
+      url: 'https://www.greendecors.in/projects',
+      image: '/favicon.ico',
+      siteName: 'Green Decors India',
+    },
+    twitter: {
+      card: 'summary',
+      title: 'Interior Designs in Mangalore - Project Details | Green Decors India',
+      description:
+        'Detailed project work from Green Decors India across Mangalore and Puttur, Karnataka.',
+      image: '/favicon.ico',
+    },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [buildLocalBusinessJsonLd(), buildInteriorDesignServiceJsonLd()],
+    },
+  });
   const projects: Record<string, any> = {
     'living-room': {
       name: 'Living Room Makeover',
@@ -136,7 +169,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
   };
 
   const project = projects[projectId] || projects['living-room'];
-  const [selectedImage, setSelectedImage] = useState(0);
+  const [, setSelectedImage] = useState(0);
 
   // Animation variants
   const fadeIn = {
@@ -273,7 +306,8 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
                 >
                   <motion.img
                     src={image}
-                    alt={`Gallery ${index + 1}`}
+                    alt={`Project gallery image ${index + 1}`}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}

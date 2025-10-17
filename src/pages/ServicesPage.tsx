@@ -1,11 +1,44 @@
 import { ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useSEO, buildLocalBusinessJsonLd, buildInteriorDesignServiceJsonLd } from '../utils/useSEO';
 
 interface ServicesPageProps {
   onNavigate: () => void;
 }
 
 function ServicesPage({ onNavigate }: ServicesPageProps) {
+  useSEO({
+    title: 'Interior Designers in Puttur Karnataka | Services - Green Decors India',
+    description:
+      'Interior design services in Mangalore and Puttur by Green Decors India. Residential interiors, modular kitchens, commercial spaces, eco decor, and lighting plans.',
+    keywords: [
+      'interior designs in Mangalore',
+      'interior designers in Puttur Karnataka',
+      'home interior decor in Mangalore',
+      'interior design services',
+    ],
+    canonicalUrl: 'https://www.greendecors.in/services',
+    openGraph: {
+      type: 'website',
+      title: 'Interior Designers in Puttur Karnataka | Services - Green Decors India',
+      description:
+        'Explore our interior design services across Mangalore and Puttur, Karnataka.',
+      url: 'https://www.greendecors.in/services',
+      image: '/favicon.ico',
+      siteName: 'Green Decors India',
+    },
+    twitter: {
+      card: 'summary',
+      title: 'Interior Designers in Puttur Karnataka | Services - Green Decors India',
+      description:
+        'Explore our interior design services across Mangalore and Puttur, Karnataka.',
+      image: '/favicon.ico',
+    },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [buildLocalBusinessJsonLd(), buildInteriorDesignServiceJsonLd()],
+    },
+  });
   const services = [
     {
       image: 'https://images.unsplash.com/photo-1760072513367-55182245e76c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1168',
@@ -117,6 +150,9 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
                 <img
                   src={service.image}
                   alt={service.title}
+                  loading="lazy"
+                  width="1168"
+                  height="224"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
