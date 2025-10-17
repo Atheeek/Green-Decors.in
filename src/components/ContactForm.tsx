@@ -26,7 +26,7 @@ function ContactForm() {
     <div id="contact" className="py-12 md:py-24 px-4 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="space-y-6 md:space-y-8">
-          <div className="font-inter-display text-sm font-normal leading-tight text-gray-500">
+          <div className="font-inter-display text-sm font-normal  leading-tight text-gray-500">
             Contact Us
           </div>
 
@@ -34,7 +34,7 @@ function ContactForm() {
             Built for the future with us
           </h2>
 
-          <button className="px-8 py-3 bg-black text-white rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-900 transition-all">
+          <button className="px-8 py-3 bg-turquoise hover:bg-turquoise/90 text-white rounded-lg font-inter-display font-medium leading-tight  transition-all">
             Contact
           </button>
         </div>
@@ -111,7 +111,7 @@ function ContactForm() {
 
           <button
             type="submit"
-            className="w-full px-8 py-4 bg-black text-white rounded-2xl font-inter-display font-medium leading-tight hover:bg-gray-900 transition-all"
+            className="w-full px-8 py-4 bg-turquoise hover:bg-turquoise/90 text-white rounded-2xl font-inter-display font-medium leading-tight  transition-all"
           >
             Submit
           </button>

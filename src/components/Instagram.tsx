@@ -44,7 +44,7 @@ function Instagram() {
         </div>
 
         <div className="text-center">
-          <button className="px-8 py-3 bg-black text-white rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-900 transition-all">
+          <button className="px-8 py-3 bg-turquoise hover:bg-turquoise/90 text-white rounded-lg font-inter-display font-medium leading-tight  transition-all">
             View on Instagram
           </button>
         </div>

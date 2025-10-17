@@ -44,12 +44,12 @@ function PropertyCarousel() {
     <div className="py-12 md:py-24 px-4 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="space-y-8">
-          <div className="relative h-24 md:h-32 overflow-hidden">
-            <div className="flex space-x-4 animate-carousel">
+          <div className="relative h-24 md:h-32 overflow-hidden" >
+            <div className="flex space-x-4 animate-carousel ">
               {[...properties, ...properties].map((image, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-48 md:w-64 h-24 md:h-32 rounded-2xl overflow-hidden"
+                  className="flex-shrink-0 w-48 md:w-64 h-24 md:h-32 rounded-2xl  overflow-hidden"
                 >
                   <img
                     src={image}

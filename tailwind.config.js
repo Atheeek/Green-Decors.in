@@ -11,6 +11,8 @@ export default {
         },
         colors: {
           white: 'rgb(255, 255, 255)',
+          // Turquoise accent to match logo tone
+          turquoise: '#14b8a6',
         },
         fontSize: {
           '60px': '60px',

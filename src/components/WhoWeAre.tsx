@@ -20,7 +20,7 @@ function WhoWeAre() {
               Building the Future of Luxury Living.
             </h2>
 
-            <button className="px-8 py-3 bg-black text-white rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-900 transition-all">
+            <button className="px-8 py-3 bg-turquoise hover:bg-turquoise/90 text-white rounded-lg font-inter-display font-medium leading-tight transition-all">
               Get Started
             </button>
           </div>
@@ -49,8 +49,8 @@ function WhoWeAre() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Play className="w-8 h-8 text-black ml-1" fill="black" />
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-turquoise hover:bg-turquoise/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Play className="w-8 h-8 text-white ml-1 " fill="white" />
             </div>
           </div>
         </div>

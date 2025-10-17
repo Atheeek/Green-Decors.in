@@ -98,7 +98,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
             >
               Contact
             </button>
-            <button className="bg-white text-black px-4 xl:px-6 py-2.5 rounded-[15px] font-inter-display hover:bg-gray-100 transition">
+            <button className="bg-turquoise text-white px-4 xl:px-6 py-2.5 rounded-[15px] font-inter-display hover:bg-turquoise/90 transition">
               Get Started
             </button>
           </div>
@@ -169,7 +169,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
             >
               Contact
             </button>
-            <button className="bg-white text-black px-6 py-2.5 rounded-[15px] hover:bg-gray-100 transition mt-2">
+            <button className="bg-turquoise text-white px-6 py-2.5 rounded-[15px] hover:bg-turquoise/90 transition mt-2">
               Get Started
             </button>
           </div>

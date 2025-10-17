@@ -1,4 +1,5 @@
-import { ArrowLeft, Building2, Ruler, Palette, MessageSquare, Cpu, Leaf } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface ServicesPageProps {
   onNavigate: () => void;
@@ -7,62 +8,53 @@ interface ServicesPageProps {
 function ServicesPage({ onNavigate }: ServicesPageProps) {
   const services = [
     {
-      icon: <Palette className="w-12 h-12" />,
+      image: 'https://images.unsplash.com/photo-1760072513367-55182245e76c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1168',
       title: 'Residential Interiors',
-      description: 'Living rooms, bedrooms, kitchens and full-home makeovers with sustainable materials and warm palettes.',
+      description:
+        'Full-home makeovers with sustainable materials, cozy palettes, and timeless elegance.',
     },
     {
-      icon: <Ruler className="w-12 h-12" />,
+      image: 'https://images.unsplash.com/photo-1755771984341-546c2a04f236?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2069',
       title: 'Modular Kitchens',
-      description: 'Space-efficient kitchen planning, cabinetry, lighting and finishes tailored to your daily workflow.',
+      description:
+        'Tailored modular designs that combine functionality with aesthetic precision.',
     },
     {
-      icon: <Building2 className="w-12 h-12" />,
+      image: 'https://plus.unsplash.com/premium_photo-1664304066233-80febd2729b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
       title: 'Commercial Spaces',
-      description: 'Boutiques, studios and offices designed for brand impact, comfort and efficient circulation.',
+      description:
+        'Office, studio, and boutique interiors built for comfort and brand identity.',
     },
     {
-      icon: <Leaf className="w-12 h-12" />,
+      image: 'https://plus.unsplash.com/premium_photo-1683121179538-35f7fe9a1f16?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2132',
       title: 'Eco Styling & Decor',
-      description: 'Sustainable styling, natural textures, plantscapes and handcrafted accents to elevate any space.',
+      description:
+        'Sustainable styling, natural textures, and handcrafted elements for balance.',
     },
     {
-      icon: <Cpu className="w-12 h-12" />,
+      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80&auto=format&fit=crop',
       title: 'Smart Lighting Plans',
-      description: 'Layered lighting with energy‑efficient fixtures for mood, function and visual comfort.',
+      description:
+        'Ambient and task lighting designs with intelligent, energy-efficient systems.',
     },
     {
-      icon: <MessageSquare className="w-12 h-12" />,
+      image: 'https://images.unsplash.com/photo-1759239572496-4ec13e7643d6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
       title: 'Renovations & Makeovers',
-      description: 'End‑to‑end upgrades for kitchens, bedrooms and living areas with minimal waste and maximum impact.',
+      description:
+        'End-to-end remodels with a focus on sustainability, space, and design impact.',
     },
   ];
 
   const process = [
-    {
-      number: '01',
-      title: 'Consultation',
-      description: 'Understanding your vision, needs, and aspirations',
-    },
-    {
-      number: '02',
-      title: 'Concept & Design',
-      description: 'Creating architectural concepts and detailed plans',
-    },
-    {
-      number: '03',
-      title: 'Development',
-      description: 'Bringing designs to life with precision execution',
-    },
-    {
-      number: '04',
-      title: 'Delivery & Aftercare',
-      description: 'Seamless handover and ongoing support services',
-    },
+    { number: '01', title: 'Consultation', description: 'Understanding your vision, needs, and aspirations.' },
+    { number: '02', title: 'Concept & Design', description: 'Creating mood boards, 3D renders, and plans.' },
+    { number: '03', title: 'Development', description: 'Execution with attention to detail and craftsmanship.' },
+    { number: '04', title: 'Delivery & Aftercare', description: 'Seamless handover and ongoing client support.' },
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-black font-inter-display">
+      {/* Back Button */}
       <button
         onClick={onNavigate}
         className="fixed top-8 left-8 z-50 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all"
@@ -70,104 +62,132 @@ function ServicesPage({ onNavigate }: ServicesPageProps) {
         <ArrowLeft className="w-5 h-5" />
       </button>
 
-      <div className="relative h-screen">
+      {/* Hero Section */}
+      <div className="relative h-[90vh] overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center transform scale-105"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200)',
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1615873968403-89e068629265?w=1600')",
           }}
         />
-        <div className="absolute inset-0 bg-black opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-12 max-w-4xl mx-auto">
-          <h1 className="text-white font-inter-display font-medium leading-tight text-6xl mb-6">
-            Our Expertise. Your Vision.
-          </h1>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 md:px-12">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-white font-medium leading-tight text-5xl md:text-6xl mb-6"
+          >
+            Our Expertise. <br /> Your Vision.
+          </motion.h1>
 
-          <p className="text-gray-200 font-inter-display text-xl font-normal leading-relaxed max-w-3xl">
-            Delivering architectural brilliance and unmatched value through innovation and design.
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-gray-200 text-lg md:text-xl max-w-2xl"
+          >
+            Merging timeless design with innovation to redefine your living experience.
+          </motion.p>
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <div className="py-20 px-4 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-[500] mb-4">What We Offer</h2>
+          <p className="text-gray-600 text-lg">
+            Tailored interior solutions blending aesthetics, sustainability, and comfort.
           </p>
         </div>
-      </div>
 
-      <div className="py-12 md:py-24 px-4 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
-              What We Offer
-            </h2>
-            <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
-              Interior solutions for homes, studios and boutique commercial spaces
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="p-8 bg-white border border-gray-200 rounded-2xl space-y-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="text-black">{service.icon}</div>
-                <h3 className="font-inter-display text-2xl font-[500] leading-tight text-black">
-                  {service.title}
-                </h3>
-                <p className="font-inter-display text-base font-normal leading-relaxed text-gray-600">
-                  {service.description}
-                </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {services.map((service, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white border border-gray-100 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden group"
+            >
+              <div className="h-56 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="py-12 md:py-24 px-4 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
-              Our Process
-            </h2>
-            <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
-              A proven approach to delivering excellence
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {process.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="space-y-4">
-                  <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center font-inter-display text-2xl font-[500]">
-                    {step.number}
-                  </div>
-                  <h3 className="font-inter-display text-xl font-[500] leading-tight text-black">
-                    {step.title}
-                  </h3>
-                  <p className="font-inter-display text-sm font-normal leading-relaxed text-gray-600">
-                    {step.description}
-                  </p>
-                </div>
-
-                {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gray-300 -translate-x-1/2" />
-                )}
+              <div className="p-8 text-left">
+                <h3 className="text-2xl font-[500] mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-base leading-relaxed">{service.description}</p>
               </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
-      <div className="py-12 md:py-24 px-4 md:px-12 bg-black text-white">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight">
-            Let's Build Your Dream Property Today
-          </h2>
-          <button
-            onClick={onNavigate}
-            className="px-8 py-3 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-100 transition-all"
-          >
-            Contact Us
-          </button>
+      {/* Process Section */}
+      <div className="py-20 px-4 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-[500] mb-4">Our Process</h2>
+          <p className="text-gray-600 text-lg">
+            A collaborative, transparent, and efficient design journey.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-10 md:gap-16 max-w-6xl mx-auto">
+          {process.map((step, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.15 }}
+              className="flex flex-col items-center text-center max-w-[220px]"
+            >
+              <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-xl font-[500] mb-4 shadow-lg">
+                {step.number}
+              </div>
+              <h3 className="text-xl font-[500] mb-2">{step.title}</h3>
+              <p className="text-gray-600 text-sm">{step.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
+
+      {/* CTA Section */}
+      <div className="py-20 px-4 md:px-12 bg-gray-50">
+  <div className="max-w-4xl mx-auto rounded-3xl bg-white shadow-xl p-12 text-center space-y-6">
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-3xl md:text-4xl font-[500] font-inter-display leading-tight text-gray-900"
+    >
+      Let’s Build Your Dream Space
+    </motion.h2>
+
+    <motion.p
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+      className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto"
+    >
+      Together, we create interiors that reflect your lifestyle, sustainability, and modern elegance.
+    </motion.p>
+
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      onClick={onNavigate}
+      className="px-10 py-4 bg-turquoise hover:bg-turquoise/90 text-white rounded-full font-medium shadow-lg transition-all"
+    >
+      Contact Us
+    </motion.button>
+  </div>
+</div>
+
     </div>
   );
 }

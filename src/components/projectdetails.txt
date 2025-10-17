@@ -226,3 +226,182 @@ import React from 'react';
 // Make sure to add `import React from 'react';` at the top of your file.
 
 export default ProjectDetailsPage;
+
+**************************************************************************************************************
+
+
+import { ArrowLeft, Building2, Ruler, Palette, MessageSquare, Cpu, Leaf } from 'lucide-react';
+
+interface ServicesPageProps {
+  onNavigate: () => void;
+}
+
+function ServicesPage({ onNavigate }: ServicesPageProps) {
+  const services = [
+    {
+      icon: <Palette className="w-12 h-12" />,
+      title: 'Residential Interiors',
+      description: 'Living rooms, bedrooms, kitchens and full-home makeovers with sustainable materials and warm palettes.',
+    },
+    {
+      icon: <Ruler className="w-12 h-12" />,
+      title: 'Modular Kitchens',
+      description: 'Space-efficient kitchen planning, cabinetry, lighting and finishes tailored to your daily workflow.',
+    },
+    {
+      icon: <Building2 className="w-12 h-12" />,
+      title: 'Commercial Spaces',
+      description: 'Boutiques, studios and offices designed for brand impact, comfort and efficient circulation.',
+    },
+    {
+      icon: <Leaf className="w-12 h-12" />,
+      title: 'Eco Styling & Decor',
+      description: 'Sustainable styling, natural textures, plantscapes and handcrafted accents to elevate any space.',
+    },
+    {
+      icon: <Cpu className="w-12 h-12" />,
+      title: 'Smart Lighting Plans',
+      description: 'Layered lighting with energy‑efficient fixtures for mood, function and visual comfort.',
+    },
+    {
+      icon: <MessageSquare className="w-12 h-12" />,
+      title: 'Renovations & Makeovers',
+      description: 'End‑to‑end upgrades for kitchens, bedrooms and living areas with minimal waste and maximum impact.',
+    },
+  ];
+
+  const process = [
+    {
+      number: '01',
+      title: 'Consultation',
+      description: 'Understanding your vision, needs, and aspirations',
+    },
+    {
+      number: '02',
+      title: 'Concept & Design',
+      description: 'Creating architectural concepts and detailed plans',
+    },
+    {
+      number: '03',
+      title: 'Development',
+      description: 'Bringing designs to life with precision execution',
+    },
+    {
+      number: '04',
+      title: 'Delivery & Aftercare',
+      description: 'Seamless handover and ongoing support services',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <button
+        onClick={onNavigate}
+        className="fixed top-8 left-8 z-50 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all"
+      >
+        <ArrowLeft className="w-5 h-5" />
+      </button>
+
+      <div className="relative h-screen ">
+        <div
+          className="absolute inset-0 bg-cover bg-center rounded-b-[80px] md:rounded-b-[190px] "
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200)',
+          }}
+        />
+        <div className="absolute inset-0 bg- opacity-40" />
+
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center  px-12 max-w-4xl mx-auto">
+          <h1 className="text-white font-inter-display font-medium leading-tight text-6xl mb-6">
+            Our Expertise. Your Vision.
+          </h1>
+
+          <p className="text-gray-200 font-inter-display text-xl font-normal leading-relaxed max-w-3xl">
+            Delivering architectural brilliance and unmatched value through innovation and design.
+          </p>
+        </div>
+      </div>
+
+      <div className="py-12 md:py-24 px-4 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
+              What We Offer
+            </h2>
+            <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
+              Interior solutions for homes, studios and boutique commercial spaces
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="p-8 bg-white border border-gray-200 rounded-2xl space-y-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="text-black">{service.icon}</div>
+                <h3 className="font-inter-display text-2xl font-[500] leading-tight text-black">
+                  {service.title}
+                </h3>
+                <p className="font-inter-display text-base font-normal leading-relaxed text-gray-600">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="py-12 md:py-24 px-4 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-inter-display text-2xl md:text-3xl lg:text-4xl font-[500] leading-tight text-black mb-4">
+              Our Process
+            </h2>
+            <p className="font-inter-display text-lg font-normal leading-tight text-gray-600">
+              A proven approach to delivering excellence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {process.map((step, index) => (
+              <div key={index} className="relative">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center font-inter-display text-2xl font-[500]">
+                    {step.number}
+                  </div>
+                  <h3 className="font-inter-display text-xl font-[500] leading-tight text-black">
+                    {step.title}
+                  </h3>
+                  <p className="font-inter-display text-sm font-normal leading-relaxed text-gray-600">
+                    {step.description}
+                  </p>
+                </div>
+
+                {index < process.length - 1 && (
+                  <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gray-300 -translate-x-1/2" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="py-12 md:py-24 px-4 md:px-12 bg-black text-white">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight">
+            Let's Build Your Dream Property Today
+          </h2>
+          <button
+            onClick={onNavigate}
+            className="px-8 py-3 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-100 transition-all"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ServicesPage;

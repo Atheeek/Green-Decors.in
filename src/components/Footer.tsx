@@ -65,9 +65,9 @@ function Footer({ onNavigate }: FooterProps) {
               <input
                 type="email"
                 placeholder="Your Email Address"
-                className="flex-1 px-4 py-3 bg-gray-900 rounded-l-lg font-inter-display text-sm focus:outline-none focus:ring-2 focus:ring-white"
+                className="flex-1 px-4 py-3 bg-gray-900 rounded-l-lg font-inter-display text-sm focus:outline-none focus:ring-2 focus:ring-turquoise"
               />
-              <button className="px-4 py-3 bg-white text-black rounded-r-lg hover:bg-gray-200 transition-colors">
+              <button className="px-4 py-3 bg-turquoise text-white rounded-r-lg hover:bg-turquoise/90 transition-colors">
                 <ArrowRight className="w-5 h-5" />
               </button>
             </div>
