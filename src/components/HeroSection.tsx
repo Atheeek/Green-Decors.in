@@ -22,27 +22,27 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  // useEffect(() => {
-  //   if (!showLogoSplash) {
-  //     return;
-  //   }
-  //   // Show logo splash for 1.5 seconds before showing hero section
-  //   const timer = setTimeout(() => {
-  //     setShowLogoSplash(false);
-  //     try {
-  //       sessionStorage.setItem('logoSplashShown', 'true');
-  //     } catch {}
-  //   }, 1500);
-  //   return () => clearTimeout(timer);
-  // }, [showLogoSplash]);
-
   useEffect(() => {
+    if (!showLogoSplash) {
+      return;
+    }
     // Show logo splash for 1.5 seconds before showing hero section
     const timer = setTimeout(() => {
       setShowLogoSplash(false);
+      try {
+        sessionStorage.setItem('logoSplashShown', 'true');
+      } catch {}
     }, 1500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [showLogoSplash]);
+
+  // useEffect(() => {
+  //   // Show logo splash for 1.5 seconds before showing hero section
+  //   const timer = setTimeout(() => {
+  //     setShowLogoSplash(false);
+  //   }, 1500);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   // Helper to run navigation/scroll and then close the mobile menu
   const handleMobileLinkClick = (action: () => void) => {
