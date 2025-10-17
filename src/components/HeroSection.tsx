@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Play, Menu, X } from 'lucide-react';
 import logoimg from '../assets/logo.png'; // Uncomment this line and provide the correct path to your logo
+import { motion } from 'framer-motion'; // Import motion
 
 interface HeroSectionProps {
   onNavigate: (page: string) => void;
@@ -21,19 +22,27 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  // useEffect(() => {
+  //   if (!showLogoSplash) {
+  //     return;
+  //   }
+  //   // Show logo splash for 1.5 seconds before showing hero section
+  //   const timer = setTimeout(() => {
+  //     setShowLogoSplash(false);
+  //     try {
+  //       sessionStorage.setItem('logoSplashShown', 'true');
+  //     } catch {}
+  //   }, 1500);
+  //   return () => clearTimeout(timer);
+  // }, [showLogoSplash]);
+
   useEffect(() => {
-    if (!showLogoSplash) {
-      return;
-    }
     // Show logo splash for 1.5 seconds before showing hero section
     const timer = setTimeout(() => {
       setShowLogoSplash(false);
-      try {
-        sessionStorage.setItem('logoSplashShown', 'true');
-      } catch {}
     }, 1500);
     return () => clearTimeout(timer);
-  }, [showLogoSplash]);
+  }, []);
 
   // Helper to run navigation/scroll and then close the mobile menu
   const handleMobileLinkClick = (action: () => void) => {
@@ -67,63 +76,77 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
 
         {/* Navigation Bar */}
         <nav className="relative z-20 flex items-center justify-between px-4 sm:px-8 lg:px-12 py-4 sm:py-6">
-          <div className="flex pt-5 md:pt-0 items-center gap-2">
-            {/* Using a placeholder div for the logo as in the original code. 
-                Replace with the <img> tag below if you have a logo file. */}
+          <motion.div // Animate logo container
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex pt-5 md:pt-0 items-center gap-2"
+          >
             <img
+              onClick={() => scrollToSection('home')}
               src={logoimg}
               alt="Green Decors Logo"
-              className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+              className="w-12 h-12 sm:w-14 sm:h-14 cursor-pointer object-contain"
             />
-          </div>
+          </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center text-xl gap-6 xl:gap-8">
-           {/* Text Buttons with Animated Underline */}
-<button
-  onClick={() => scrollToSection('home')}
-  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
->
-  Home
-</button>
+          <motion.div // Animate desktop menu
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="hidden lg:flex items-center text-xl gap-6 xl:gap-8"
+          >
+            {/* Text Buttons with Animated Underline */}
+            <button
+              onClick={() => scrollToSection('home')}
+              className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Home
+            </button>
 
-<button
-  onClick={() => onNavigate('about')}
-  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
->
-  About Us
-</button>
+            <button
+              onClick={() => onNavigate('about')}
+              className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              About Us
+            </button>
 
-<button
-  onClick={() => scrollToSection('projects')}
-  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
->
-  Projects
-</button>
+            <button
+              onClick={() => scrollToSection('projects')}
+              className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Projects
+            </button>
 
-<button
-  onClick={() => onNavigate('services')}
-  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
->
-  Services
-</button>
+            <button
+              onClick={() => onNavigate('services')}
+              className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Services
+            </button>
 
-<button
-  onClick={() => scrollToSection('contact')}
-  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
->
-  Contact
-</button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Contact
+            </button>
 
-{/* Primary CTA Button */}
-<button className="bg-turquoise text-white px-4 xl:px-6 py-2.5 rounded-[15px] font-inter-display hover:bg-turquoise/90 transition">
-  Get Started
-</button>
-
-          </div>
+            {/* Primary CTA Button */}
+            <motion.button // Animate CTA button
+              whileHover={{ scale: 1.05 }}
+              className="bg-turquoise text-white px-4 xl:px-6 py-2.5 rounded-[15px] font-inter-display hover:bg-turquoise/90 transition"
+            >
+              Get Started
+            </motion.button>
+          </motion.div>
 
           {/* Mobile Menu Button */}
-          <button
+          <motion.button // Animate mobile menu button
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden text-white p-2 z-30"
             aria-controls="mobile-menu"
@@ -134,7 +157,7 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
             ) : (
               <Menu className="w-8 h-8" />
             )}
-          </button>
+          </motion.button>
         </nav>
 
         {/* --- Mobile Menu Panel (with transition) --- */}
@@ -196,19 +219,25 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
 
         {/* Hero Content */}
         <div className="relative z-10 px-4 sm:px-8 lg:px-12 md:mt-10 mt-28 flex items-center h-[calc(100%-80px)] sm:h-[calc(100%-100px)]">
-          <div className="max-w-4xl">
+          <motion.div // Animate the entire hero content block
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="max-w-4xl"
+          >
             <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-inter-display font-medium leading-tight mb-6 sm:mb-8">
               Discover the art of eco conscious interior design with Green
               Decors.
             </h1>
-            <button
+            <motion.button // Animate the Play Video button
+              whileHover={{ scale: 1.05 }}
               onClick={() => handleMobileLinkClick(() => scrollToSection('whoweare'))}
               className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-[15px] font-inter-display hover:bg-white/20 transition border border-white/20 text-sm sm:text-base"
             >
               <Play className="w-5 h-5" fill="white" />
               <span>Play Video</span>
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
       </div>
     </section>

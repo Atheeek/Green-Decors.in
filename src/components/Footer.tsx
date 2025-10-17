@@ -1,5 +1,5 @@
 import { ArrowRight, Youtube, Instagram, Linkedin, Facebook } from 'lucide-react';
-
+import logoimg from "../assets/logo.png";
 interface FooterProps {
   onNavigate: (page: string) => void;
 }
@@ -10,14 +10,21 @@ function Footer({ onNavigate }: FooterProps) {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           <div className="space-y-6">
+            <div className='flex items-center'>
+            <img
+              src={logoimg}
+              alt="Green Decors Logo"
+              className="w-12 h-12 sm:w-14 sm:h-14 cursor-pointer object-contain"
+            />
             <h3 className="font-inter-display text-xl md:text-2xl font-[400] leading-tight">
               GREEN DECORS
             </h3>
+            </div>
 
             <div className="space-y-3 font-inter-display text-sm font-normal leading-relaxed text-gray-400">
               <p>Studio: Nehrunagar, Puttur</p>
               <p>Karnataka, India</p>
-              <p>Phone: +91 00000 00000</p>
+              <p>Phone: +91 9874563210</p>
               <p>Email: greendecors.india@gmail.com</p>
             </div>
           </div>
