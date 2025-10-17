@@ -1,5 +1,6 @@
 import { ArrowLeft, MapPin, Calendar, User, Building, Maximize, Droplet, Home, Eye, Leaf } from 'lucide-react';
 import { useState } from 'react';
+import { motion } from 'framer-motion'; // Import motion
 
 interface ProjectDetailsPageProps {
   projectId: string;
@@ -33,7 +34,7 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
         { icon: <Droplet className="w-6 h-6" />, title: 'Low‑VOC Finishes' },
       ],
     },
-    kitchen: {
+     kitchen: {
       name: 'Minimal Modular Kitchen',
       tagline: 'Efficient Storage • Easy Maintenance',
       mainImage: 'https://images.unsplash.com/photo-1600450575743-43793ba079d3?q=80&w=2073&auto=format&fit=crop',
@@ -137,140 +138,203 @@ function ProjectDetailsPage({ projectId, onNavigate }: ProjectDetailsPageProps) 
   const project = projects[projectId] || projects['living-room'];
   const [selectedImage, setSelectedImage] = useState(0);
 
+  // Animation variants
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const staggerContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <button
         onClick={onNavigate}
-        className="fixed top-4 left-4 md:top-8 md:left-8 z-50 w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all"
+        className="fixed top-8 left-8 z-50 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all"
       >
         <ArrowLeft className="w-5 h-5" />
       </button>
 
+      {/* Hero Section */}
       <div className="relative h-[70vh]">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${project.mainImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-black opacity-30" />
 
         <div className="relative z-10 flex flex-col justify-end h-full px-4 md:px-12 pb-8 md:pb-16 max-w-7xl mx-auto">
-          <h1 className="text-white font-inter-display font-semi-bold leading-tight text-3xl md:text-5xl lg:text-6xl mb-4">
-            {project.name}
-          </h1>
-          <p className="text-gray-200 font-inter-display text-base md:text-lg lg:text-xl font-normal leading-tight">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+            <motion.h1 className="text-white font-inter-display font-medium leading-tight text-3xl md:text-5xl lg:text-6xl mb-4">
+              {project.name}
+            </motion.h1>
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 1 }}
+            className="text-gray-200 font-inter-display text-base md:text-lg lg:text-xl font-normal leading-tight"
+          >
             {project.tagline}
-          </p>
+          </motion.p>
         </div>
       </div>
 
       <div className="py-12 md:py-24 px-4 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 md:mb-24">
-            <div className="space-y-6">
+          {/* Overview Section */}
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-12 md:mb-24"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div className="space-y-6" variants={fadeIn}>
               <h2 className="font-inter-display text-2xl md:text-3xl font-[500] leading-tight text-black">
                 Project Overview
               </h2>
               <p className="font-inter-display text-base md:text-lg font-normal leading-relaxed text-gray-600">
                 {project.description}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-gray-50 p-8 rounded-2xl space-y-6">
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-5 h-5 text-gray-400 mt-1" />
-                <div>
-                  <div className="font-inter-display text-sm font-normal text-gray-500">Location</div>
-                  <div className="font-inter-display text-base font-[500] text-black">{project.stats.location}</div>
+            <motion.div className="bg-gray-50 p-8 rounded-2xl space-y-6" variants={fadeIn}>
+                <div className="flex items-start space-x-4">
+                    <MapPin className="w-5 h-5 text-gray-400 mt-1" />
+                    <div>
+                        <div className="font-inter-display text-sm font-normal text-gray-500">Location</div>
+                        <div className="font-inter-display text-base font-[500] text-black">{project.stats.location}</div>
+                    </div>
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <Maximize className="w-5 h-5 text-gray-400 mt-1" />
-                <div>
-                  <div className="font-inter-display text-sm font-normal text-gray-500">Area</div>
-                  <div className="font-inter-display text-base font-[500] text-black">{project.stats.area}</div>
+                <div className="flex items-start space-x-4">
+                    <Maximize className="w-5 h-5 text-gray-400 mt-1" />
+                    <div>
+                        <div className="font-inter-display text-sm font-normal text-gray-500">Area</div>
+                        <div className="font-inter-display text-base font-[500] text-black">{project.stats.area}</div>
+                    </div>
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <Calendar className="w-5 h-5 text-gray-400 mt-1" />
-                <div>
-                  <div className="font-inter-display text-sm font-normal text-gray-500">Completion Year</div>
-                  <div className="font-inter-display text-base font-[500] text-black">{project.stats.year}</div>
+                <div className="flex items-start space-x-4">
+                    <Calendar className="w-5 h-5 text-gray-400 mt-1" />
+                    <div>
+                        <div className="font-inter-display text-sm font-normal text-gray-500">Completion Year</div>
+                        <div className="font-inter-display text-base font-[500] text-black">{project.stats.year}</div>
+                    </div>
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <User className="w-5 h-5 text-gray-400 mt-1" />
-                <div>
-                  <div className="font-inter text-sm font-normal text-gray-500">Architect / Designer</div>
-                  <div className="font-inter-display text-base font-[500] text-black">{project.stats.architect}</div>
+                <div className="flex items-start space-x-4">
+                    <User className="w-5 h-5 text-gray-400 mt-1" />
+                    <div>
+                        <div className="font-inter text-sm font-normal text-gray-500">Architect / Designer</div>
+                        <div className="font-inter-display text-base font-[500] text-black">{project.stats.architect}</div>
+                    </div>
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <Building className="w-5 h-5 text-gray-400 mt-1" />
-                <div>
-                  <div className="font-inter text-sm font-normal text-gray-500">Client Type</div>
-                  <div className="font-inter-display text-base font-[500] text-black">{project.stats.client}</div>
+                 <div className="flex items-start space-x-4">
+                    <Building className="w-5 h-5 text-gray-400 mt-1" />
+                    <div>
+                        <div className="font-inter text-sm font-normal text-gray-500">Client Type</div>
+                        <div className="font-inter-display text-base font-[500] text-black">{project.stats.client}</div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
+          {/* Gallery Section */}
           <div className="mb-24">
-            <h2 className="font-inter-display text-3xl font-[500] leading-tight text-black mb-8">
+            <motion.h2
+              className="font-inter-display text-3xl font-[500] leading-tight text-black mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              // viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
               Project Gallery
-            </h2>
+            </motion.h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
+              initial="hidden"
+              whileInView="visible"
+              // viewport={{ once: true }}
+              variants={staggerContainer}
+            >
               {project.gallery.map((image: string, index: number) => (
-                <button
+                <motion.div
                   key={index}
+                  className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer"
+                  variants={fadeIn}
                   onClick={() => setSelectedImage(index)}
-                  className="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer"
                 >
-                  <img
+                  <motion.img
                     src={image}
                     alt={`Gallery ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
                   />
-                </button>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
+          {/* Features Section */}
           <div>
-            <h2 className="font-inter-display text-3xl font-[500] leading-tight text-black mb-8">
+            <motion.h2
+              className="font-inter-display text-3xl font-[500] leading-tight text-black mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              // viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
               Key Features
-            </h2>
+            </motion.h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
+              initial="hidden"
+              whileInView="visible"
+              // viewport={{ once: true }}
+              variants={staggerContainer}
+            >
               {project.features.map((feature: any, index: number) => (
-                <div key={index} className="flex items-center space-x-3">
+                <motion.div key={index} className="flex items-center space-x-3" variants={fadeIn}>
                   <div className="text-black">{feature.icon}</div>
                   <span className="font-inter-display text-base font-medium leading-tight text-black">
                     {feature.title}
                   </span>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
+      {/* CTA Section */}
       <div className="py-12 md:py-24 px-4 md:px-12 bg-black text-white">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        <motion.div
+          className="max-w-4xl mx-auto text-center space-y-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          // viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="font-inter-display text-3xl md:text-4xl lg:text-5xl font-[500] leading-tight">
             Interested in similar interiors?
           </h2>
-          <button
+          <motion.button
             onClick={onNavigate}
+            whileHover={{ scale: 1.05 }}
             className="px-8 py-3 bg-white text-black rounded-lg font-inter-display font-medium leading-tight hover:bg-gray-100 transition-all"
           >
             Explore More Interiors
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
     </div>
   );

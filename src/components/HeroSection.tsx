@@ -8,7 +8,12 @@ interface HeroSectionProps {
 
 function HeroSection({ onNavigate }: HeroSectionProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [showLogoSplash, setShowLogoSplash] = useState(true);
+  const [showLogoSplash, setShowLogoSplash] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('logoSplashShown') !== 'true';
+    }
+    return true;
+  });
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -17,12 +22,18 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
     }
   };
   useEffect(() => {
+    if (!showLogoSplash) {
+      return;
+    }
     // Show logo splash for 1.5 seconds before showing hero section
     const timer = setTimeout(() => {
       setShowLogoSplash(false);
+      try {
+        sessionStorage.setItem('logoSplashShown', 'true');
+      } catch {}
     }, 1500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [showLogoSplash]);
 
   // Helper to run navigation/scroll and then close the mobile menu
   const handleMobileLinkClick = (action: () => void) => {
@@ -68,39 +79,47 @@ function HeroSection({ onNavigate }: HeroSectionProps) {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center text-xl gap-6 xl:gap-8">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-white font-inter-display hover:underline underline-offset-4"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => onNavigate('about')}
-              className="text-white font-inter-display hover:underline underline-offset-4"
-            >
-              About Us
-            </button>
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="text-white font-inter-display hover:underline underline-offset-4"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => onNavigate('services')}
-              className="text-white font-inter-display hover:underline underline-offset-4"
-            >
-              Services
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-white font-inter-display hover:underline underline-offset-4"
-            >
-              Contact
-            </button>
-            <button className="bg-turquoise text-white px-4 xl:px-6 py-2.5 rounded-[15px] font-inter-display hover:bg-turquoise/90 transition">
-              Get Started
-            </button>
+           {/* Text Buttons with Animated Underline */}
+<button
+  onClick={() => scrollToSection('home')}
+  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+>
+  Home
+</button>
+
+<button
+  onClick={() => onNavigate('about')}
+  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+>
+  About Us
+</button>
+
+<button
+  onClick={() => scrollToSection('projects')}
+  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+>
+  Projects
+</button>
+
+<button
+  onClick={() => onNavigate('services')}
+  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+>
+  Services
+</button>
+
+<button
+  onClick={() => scrollToSection('contact')}
+  className="relative text-white font-inter-display overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+>
+  Contact
+</button>
+
+{/* Primary CTA Button */}
+<button className="bg-turquoise text-white px-4 xl:px-6 py-2.5 rounded-[15px] font-inter-display hover:bg-turquoise/90 transition">
+  Get Started
+</button>
+
           </div>
 
           {/* Mobile Menu Button */}
